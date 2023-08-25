@@ -29,7 +29,6 @@ theme:
   palette:
     primary: custom
 
-
 extra:
   social:
     - icon: fontawesome/brands/github-alt
