@@ -6,7 +6,7 @@ mkdocs book](https://www.mkdocs.org/) hosted on
 [GitHub](https://github.com/MikhailSpirin/khaki-book).
 
 **The wiki is meant to be read [in the web
-format](https://lyz-code.github.io/blue-book).**
+format](https://mikhailspirin.github.io/khaki-book/).**
 
 ## Contributing
 
@@ -14,7 +14,7 @@ If you find a mistake or want to add new content, please make the changes. You
 can use the edit button on the top right of any article to add them in a pull
 request, if you don't know what that means, you can always open an
 [issue](h) or send me an
-[email](https://lyz-code.github.io/blue-book/contact/).
+[email](https://mikhailspirin.github.io/khaki-book/contact/).
 
 I personally want to thank [The Blue Book](https://lyz-code.github.io/blue-book) for this idea which i do like very much. Go there and check it!
 
