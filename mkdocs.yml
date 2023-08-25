@@ -5,7 +5,11 @@ site_author: MikhailS
 # site_url: https://lyz-code.github.io/blue-book
 nav:
   - Introduction: index.md
-  - Emojis: emojis.md
+  - Coding:
+    - Python: python.md
+    - Pip: pip.md
+  - Generative:
+    - Shaders: shaders.md
 
   # - Life Management:
   #     - life_management.md
