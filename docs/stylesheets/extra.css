@@ -1,3 +1,7 @@
 :root {
   --md-primary-fg-color:               #2e3e2c;
 }
+.md-content {
+  --md-typeset-a-color:                #a4c391;
+  /* #9791c3 #a4c391*/
+}
