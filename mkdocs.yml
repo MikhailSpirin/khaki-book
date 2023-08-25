@@ -1,0 +1,49 @@
+---
+site_name: The Dark Khaki Book Of Curiosities
+site_description: My personal digital garden
+site_author: MikhailS
+# site_url: https://lyz-code.github.io/blue-book
+nav:
+  - Introduction: index.md
+  - Emojis: emojis.md
+
+  # - Life Management:
+  #     - life_management.md
+  #     - Time Management: time_management.md
+  #     - Task Management:
+  #         - task_management.md
+  #         - Getting Things Done: gtd.md
+  #         - Task Management Tools:
+  #             - task_tools.md
+  #             - Org Mode: orgmode.md
+  #             - OpenProject: openproject.md
+  #         - Task Management Workflows: task_workflows.md
+
+
+# extra:
+#   social:
+#     - icon: fontawesome/brands/github-alt
+#       link: https://github.com/MikhailSpirin
+#     - icon: fontawesome/solid/rss
+#       link: https://lyz-code.github.io/blue-book/newsletter/0_newsletter_index
+theme:
+  name: material
+  custom_dir: theme
+  features:
+    - navigation.footer
+    # - navigation.instant
+    - navigation.top
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+
+  palette:
+    primary: custom
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/MikhailSpirin
+
+extra_css:
+  - stylesheets/extra.css
