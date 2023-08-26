@@ -1,5 +1,8 @@
 #!/bin/sh
 
+cd ~/Sites/dark-khaki-book
+source .venv/bin/activate
+
 echo "... commit and push ..."
 
 git add .
