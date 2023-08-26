@@ -1,0 +1,2782 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="My personal digital garden">
+      
+      
+        <meta name="author" content="MikhailS">
+      
+      
+        <link rel="canonical" href="https://mikhailspirin.github.io/khaki-book/coding/challenge/codewars/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.3">
+    
+    
+      
+        <title>Intro - The Dark Khaki Book Of Curiosities</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0e669242.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#intro" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="The Dark Khaki Book Of Curiosities" class="md-header__button md-logo" aria-label="The Dark Khaki Book Of Curiosities" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Dark Khaki Book Of Curiosities
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intro
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MikhailSpirin/khaki-book" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MikhailSpirin/khaki-book
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="The Dark Khaki Book Of Curiosities" class="md-nav__button md-logo" aria-label="The Dark Khaki Book Of Curiosities" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    The Dark Khaki Book Of Curiosities
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MikhailSpirin/khaki-book" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MikhailSpirin/khaki-book
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Coding
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Coding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pip
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Generative
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Generative
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generative/shaders/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shaders
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="intro">Intro</h1>
+<p>I have a long story about <a href="www.codewars.com">Codewars</a>, i started it with Java, continued with JS, now im training Python and SQL. For me, its the best source of interesting algorithmic tasks. Return to it time to time...</p>
+<h1 id="katas">Katas!</h1>
+<h2 id="kata-1-vowel-count">Kata 1: Vowel Count</h2>
+<table>
+<thead>
+<tr>
+<th>Meta</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td>2021-03-22</td>
+</tr>
+<tr>
+<td>Link</td>
+<td>https://www.codewars.com/kata/54ff3102c1bad923760001f3/</td>
+</tr>
+</tbody>
+</table>
+<h3 id="my-solution">My solution</h3>
+<p>Return the number (count) of vowels in the given string.</p>
+<pre><code class="language-javascript">function getCount(str) {
+  let vowelsArr = str.match(/[aeiou]/ig)
+  return vowelsArr != null ? vowelsArr.length : 0;
+}
+</code></pre>
+<h2 id="best-another-solution">Best another solution</h2>
+<p>Cool lesson is working with null - this is clever solution:</p>
+<pre><code class="language-javascript">const getCount = (str)=&gt;(str.match(/[aeiou]/ig)||[]).length;
+</code></pre>
+<h2 id="kata-10-sum-maximum-subarray">Kata 10 Sum Maximum Subarray</h2>
+<table>
+<thead>
+<tr>
+<th>Meta</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td>2021-04-04</td>
+</tr>
+<tr>
+<td>Link</td>
+<td>https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c</td>
+</tr>
+</tbody>
+</table>
+<h3 id="my-solution_1">My solution</h3>
+<pre><code class="language-javascript">var maxSequence = function(arr){
+  let bestSum = 0;
+  return arr.reduce((acc, curr)=&gt;{
+    bestSum = (bestSum + curr &gt; curr) ? bestSum + curr : curr;
+    return (acc &gt; bestSum) ? acc : bestSum
+  },0)
+}
+</code></pre>
+<p>This is another algorytm - Kadane Algorytm, which i have no chance to come up with)) So i just read about it it in wiki and created my understood version of it</p>
+<p>nothing that clever in other solutions tho</p>
+<h2 id="kata-12-multiply-n-primes">Kata 12: Multiply N Primes</h2>
+<table>
+<thead>
+<tr>
+<th>Meta</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td>2021-04-06</td>
+</tr>
+<tr>
+<td>Link</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="my-solution_2">My solution</h3>
+<pre><code class="language-javascript">function numPrimorial(n){
+  const findPrimes = (lim) =&gt; {
+    let arr = Array(lim).fill(true);
+    arr[0]=arr[1]=false;
+    for (let i=2; i&lt;=Math.sqrt(lim); i++)
+      if (arr[i] == true) for (j=i*i; j&lt;lim; j+=i)
+        arr[j] = false;  
+    return arr.reduce((out, bool, i) =&gt; bool ? out.concat(i) : out, [] );
+  }
+  primes=[];
+  for (i=n; primes.length &lt; n; i*=2) primes = findPrimes(i);
+  return primes.slice(0,n).reduce((acc,curr) =&gt; acc *= curr, 1)
+}
+</code></pre>
+<p>I hope i will finally remember Sieve of Eratosthenes algorytm. Each time.. This is very logical question on any interview, i must remember it</p>
+<p>Another problem - i know it can be optimized, because i calculate array or primes each time</p>
+<h2 id="kata-13-decomposing-factorial">Kata 13: Decomposing Factorial</h2>
+<table>
+<thead>
+<tr>
+<th>Meta</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td>2021-04-08</td>
+</tr>
+<tr>
+<td>Link</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="my-solution_3">My solution</h3>
+<pre><code class="language-javascript">function decomp(n) {
+  const subDecomp = (num,dividers) =&gt; {
+    let rem = num;
+    for (let i=2; i&lt;=Math.sqrt(num); i++) {
+      if (rem % i === 0){
+        if (!dividers[i]) dividers[i] = 0;
+        while (rem % i === 0){
+          dividers[i]++;
+          rem /= i;
+        }
+      }
+    }
+    if (rem &gt; 1)
+      dividers[rem] = !dividers[rem] ? 1 :dividers[rem]+1;
+    return dividers;
+  }
+  divs = {};
+  for (let i=2; i&lt;=n; i++){
+    divs=subDecomp(i,divs);
+    }
+  return Object.keys(divs).map(x=&gt;divs[x] == 1 ? x : `${x}^${divs[x]}`).join(' * ');
+}
+</code></pre>
+<p>my first attempt took me too far. I should reduce usage of reduce and stop generating arrays all the time -</p>
+<p>it didn't pass random tests due to time of execution.. of course, there are very many divisions</p>
+<p>and i cheated for original solution.. found idea on different site...</p>
+<h2 id="best-another-solution_1">Best another solution</h2>
+<pre><code class="language-javascript">function getPrimes(n) {
+  let lim = Math.sqrt(n);
+  let numbers = Array(n+1).fill().map((_,i)=&gt;i);
+  numbers[0] = numbers[1]=0;
+  for (i=2; i&lt;lim; i++)
+    for (j=i*2; j&lt;numbers.length; j+=i)
+      numbers[j]=0;
+  return numbers.filter(i=&gt;!!i)
+}
+
+function getDivs(n,primes) {
+  //console.log(primes);
+  return primes.reduce((acc,curr)=&gt;{
+    let divs = [];
+    while (n % curr == 0 &amp;&amp; n &gt;= curr){
+      n /= curr;
+      divs = [...divs, curr];
+    }
+    return [...acc,...divs];
+  },[])
+}
+
+function decomp(n) {
+  let primes = getPrimes(n);
+  let divs = Array(n+1).fill().map((_,i)=&gt;i).filter(i=&gt;i &gt;= 2)
+      .reduce((acc,curr)=&gt;[...acc, ...getDivs(curr,primes)],[])
+      .reduce(function(acc, curr) {
+          acc[curr] = (acc[curr] || 0) + 1;
+          return acc;
+      }, {});
+  return Object.keys(divs).map(x=&gt;divs[x] == 1 ? x : `${x}^${divs[x]}`).join(' * ');
+}
+</code></pre>
+<h2 id="kata-14-difference-between-arrays">Kata 14: Difference Between Arrays"</h2>
+<table>
+<thead>
+<tr>
+<th>Meta</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td>2021-04-08</td>
+</tr>
+<tr>
+<td>Link</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>date = 2021-04-09
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<p>https://www.codewars.com/kata/523f5d21c841566fde000009</p>
+<h3 id="my-solution_4">My solution</h3>
+<pre><code class="language-javascript">function arrayDiff(a, b) {
+  return a.reduce((acc, curr) =&gt; b.indexOf(curr) == -1 ? [...acc, curr] : acc, []);
+}
+</code></pre>
+<p>thought it is very clever until i saw this one:</p>
+<h2 id="best-another-solution_2">Best another solution</h2>
+<pre><code class="language-javascript">function array_diff(a, b) {
+  return a.filter(e =&gt; !b.includes(e));
+}
+</code></pre>
+<p>i forgot about filter...</p>
+<h2 id="kata-15-word-of-a10n">Kata 15: Word of A10n"</h2>
+<table>
+<thead>
+<tr>
+<th>Meta</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td>2021-04-10</td>
+</tr>
+<tr>
+<td>Link</td>
+<td>https://www.codewars.com/kata/5375f921003bf62192000746</td>
+</tr>
+</tbody>
+</table>
+<h3 id="my-solution_5">My solution</h3>
+<pre><code class="language-javascript">const abbreviate = (string) =&gt; string.replace(/\w+/gim,
+        (s)=&gt;s.length&lt;4 ? s : `${s.slice(0,1)}${s.length-2}${s.slice(s.length-1)}`);
+</code></pre>
+<h2 id="best-another-solution_3">Best another solution</h2>
+<p>Oneliner - which i do like. Cool that my solution is actually almost exactly "best practices" + "clever" solution.</p>
+<h2 id="kata-16-count-presses">Kata 16: Count Presses"</h2>
+<table>
+<thead>
+<tr>
+<th>Meta</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td>2021-04-11</td>
+</tr>
+<tr>
+<td>Link</td>
+<td>https://www.codewars.com/kata/54a2e93b22d236498400134b</td>
+</tr>
+</tbody>
+</table>
+<h3 id="my-solution_6">My solution</h3>
+<pre><code class="language-javascript">function presses(phrase) {
+  let combi = ['1', 'ABC2', 'DEF3', 'GHI4', 'JKL5', 'MNO6', 'PQRS7', 'TUV8', 'WXYZ9', '*', ' 0', '#' ];
+  return phrase.toUpperCase().split(&quot;&quot;).reduce((acc, curr)=&gt;{
+    let word = combi.filter(i=&gt;i.includes(curr))[0];
+    return acc+word.indexOf(curr)+1;
+  },0);
+}
+</code></pre>
+<p>Very important in this kata for my POV - how to make it simple and effective, so that in real life you can give it diffreent keyboard layouts</p>
+<p>But now i think that simples solution might be better - just additional helper to transform
+layouts to number of presses and store object with "symbol":"number of presses"</p>
+<h2 id="kata-17-longest-palindrome">Kata 17: Longest Palindrome"</h2>
+<table>
+<thead>
+<tr>
+<th>Meta</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td></td>
+</tr>
+<tr>
+<td>Link</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>description = "Kata 17"
+date = 2021-04-12
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<h3 id="my-solution_7">My solution</h3>
+<pre><code class="language-javascript">longestPalindrome=function(s){
+  const checkIfPalindrome = (arr) =&gt; arr.join(&quot;&quot;) == arr.reverse().join(&quot;&quot;)
+  const findMaxPalindrome = (acc,c,ind,arr)=&gt; {    
+    let maxP = &quot;&quot;;
+    //check case of odd length palindrome
+    let j=1;
+    let tryP = c;
+    while((ind-j)&gt;=0 &amp;&amp; (ind+j)&lt;=arr.length) {
+      tryP = [arr[ind-j], ...tryP, arr[ind+j]];
+      if (checkIfPalindrome(tryP) &amp;&amp; tryP.length &gt; maxP.length) {
+        maxP = tryP.join(&quot;&quot;);
+      } else break;
+      j++;
+    }
+
+    j=1;
+    tryP = [c, arr[ind+1]];
+    while((ind-j)&gt;=0 &amp;&amp; (ind+j+1) &lt;= arr.length) {
+      tryP = [arr[ind-j], ...tryP, arr[ind+j+1]];
+      if (checkIfPalindrome(tryP) &amp;&amp; tryP.length &gt; maxP.length) {
+        maxP = tryP.join(&quot;&quot;);
+      } else break;
+      j++;
+    }
+    if (checkIfPalindrome(tryP) &amp;&amp; tryP.length &gt; maxP.length)
+      maxP = tryP.join(&quot;&quot;);    
+    if (!maxP) {
+      maxP = c;
+    }
+    return acc.length &lt; maxP.length ? maxP : acc;
+  }
+
+   return s.split(&quot;&quot;).reduce(findMaxPalindrome,[]).length;
+}
+</code></pre>
+<p>that was really tough for me, as i couldn't find small cool algorytm for this. Except bruteforce, only
+idea which i thought of is check all symbols and check if to both forward and backward it has palindrome.
+Complexity looks like O(n2)
+My silution has a lot to enhance, but i can't come up with good enhancements
+Anyway, as o understand, there is only 1 algorytm which is simpler - manaker algorytm
+Also not sure, but maybe approach which is called dynamic programming could be better than mine</p>
+<p>by far - the most complicated task for me</p>
+<h2 id="kata-18-statistics">Kata 18: Statistics</h2>
+<table>
+<thead>
+<tr>
+<th>Meta</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td></td>
+</tr>
+<tr>
+<td>Link</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>description = "Kata 18"
+date = 2021-04-13
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<h3 id="my-solution_8">My solution</h3>
+<pre><code class="language-javascript">const convToMS = (i) =&gt; {
+  let t = i.split(&quot;|&quot;);
+  return new Date(1970,1,1,t[0],t[1],t[2]).getTime()
+}
+const convToDate = (i) =&gt; {
+  let t = new Date(i)
+  return `${zero(t.getHours())}|${zero(t.getMinutes())}|${zero(t.getSeconds())}`
+}
+const zero = (i) =&gt; i &lt; 10 ? `0${i}` : i;
+const stat = (strg) =&gt; {
+  if (!strg) return &quot;&quot;;
+  let tMS = strg.split(&quot;, &quot;).map(convToMS).sort((a,b)=&gt;a-b);
+  let len = tMS.length;
+  let range = tMS[len-1] - tMS[0];
+  let average = tMS.reduce((a,b) =&gt; a+b,0) / len;
+  let median = len % 2 == 0 ? (tMS[len/2] + tMS[len/2-1]) / 2: tMS[(len-1)/2];
+  return `Range: ${convToDate(range)} Average: ${convToDate(average)} Median: ${convToDate(median)}`      
+}
+</code></pre>
+<p>Basically that wasn't complicated - string manipulation, main task here for me was to do it clean and readable
+Training "team point of view" when writing a code
+I see no cooler solutions than mine</p>
+<p>Just one additional comment - here i tried to split functionality in different functions, as i try to do clean and pure functions
+No modification of global vars, no complex actions - just one straigntforwad action</p>
+<h2 id="kata-19-number-to-word">Kata 19 Number to Word"</h2>
+<table>
+<thead>
+<tr>
+<th>Meta</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td></td>
+</tr>
+<tr>
+<td>Link</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>description = "Kata"
+date = 2021-04-14
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<h3 id="my-solution_9">My solution</h3>
+<pre><code class="language-javascript">function number2words(n, result = &quot;&quot;){
+  const d = {
+    0:&quot;zero&quot;, 1:&quot;one&quot;, 2:&quot;two&quot;, 3:&quot;three&quot;, 4: &quot;four&quot;, 5:&quot;five&quot;, 6:&quot;six&quot;, 7:&quot;seven&quot;, 8:&quot;eight&quot;, 9:&quot;nine&quot;,
+    10:&quot;ten&quot;, 11:&quot;eleven&quot;, 12:&quot;twelve&quot;, 13:&quot;thirteen&quot;, 14:&quot;fourteen&quot;, 15:&quot;fifteen&quot;,
+    16:&quot;sixteen&quot;, 17:&quot;seventeen&quot;, 18:&quot;eighteen&quot;, 19:&quot;nineteen&quot;,
+    20:&quot;twenty&quot;,30:&quot;thirty&quot;,40:&quot;forty&quot;,50:&quot;fifty&quot;,60:&quot;sixty&quot;,70:&quot;seventy&quot;,80:&quot;eighty&quot;,90:&quot;ninety&quot;,
+  }
+    switch (true) {
+        case (n&lt;=20 || n==30 || n==40 || n==50 || n==60 || n==70 || n==80 || n==90) :
+          result = `${result}${d[n]}`; break;
+        case (n&gt;20 &amp;&amp; n&lt;100):
+          result = `${d[n-n%10]}-${d[n%10]}`; break;
+        case (n%100 == 0 &amp;&amp; n&lt;1000):
+          result = `${d[Math.round(n/100)]} hundred`; break;
+        case (n&gt;=100 &amp;&amp; n&lt;1000):
+          result = `${d[Math.floor(n/100)]} hundred ${number2words(n%100, result)}`;break;
+        case (n%1000 == 0 &amp;&amp; n&lt;10000):
+          result = `${d[Math.floor(n/1000)]} thousand`; break;
+        case (n&gt;=1000 &amp;&amp; n&lt;999999):
+          result = `${number2words(Math.floor(n/1000), result)} thousand ${number2words(n%1000, result)}`;break;
+    }
+  return result;// works for numbers between 0 and 999999   
+}
+</code></pre>
+<p>// This task tought me that i really can use recursion in real life, and take this decision naturally. My solution is not perfect,
+// i see that i addded to many conditions - seems that can be done only with 3. But this is MINE solution)</p>
+<p>// Probably after refactor i could approach this best solution. This is just a lot of ternary checks + now i see that
+// i don't need object in this task</p>
+<h2 id="best-another-solution_4">Best another solution</h2>
+<pre><code class="language-javascript">function number2words(n){
+    // works for numbers between 0 and 999999
+    var b=[&quot;zero&quot;,&quot;one&quot;,&quot;two&quot;,&quot;three&quot;,&quot;four&quot;,&quot;five&quot;,&quot;six&quot;,&quot;seven&quot;,&quot;eight&quot;,&quot;nine&quot;,&quot;ten&quot;,&quot;eleven&quot;,&quot;twelve&quot;,&quot;thirteen&quot;,&quot;fourteen&quot;,&quot;fifteen&quot;,&quot;sixteen&quot;,&quot;seventeen&quot;,&quot;eighteen&quot;,&quot;nineteen&quot;];
+    var b2=[&quot;twenty&quot;,&quot;thirty&quot;,&quot;forty&quot;,&quot;fifty&quot;,&quot;sixty&quot;,&quot;seventy&quot;,&quot;eighty&quot;,&quot;ninety&quot;]
+    if(n&gt;=0 &amp;&amp; n&lt;20){
+      return b[n];
+    }
+    if(n &gt;= 20 &amp;&amp; n&lt;100){
+      return b2[Math.floor(n/10)-2]+(n%10===0?'':'-'+b[n%10])
+    }
+    if(n&gt;=100 &amp;&amp; n&lt;1000){
+      return b[Math.floor(n/100)]+' hundred'+(n%100===0?'':' '+number2words(n%100));
+    }else{
+      return number2words(Math.floor(n/1000))+' thousand'+(n%1000===0?'':' '+number2words(n%1000));
+    }
+  }
+</code></pre>
+<h2 id="kata-2-next-perfect-square">Kata 2: Next Perfect Square"</h2>
+<table>
+<thead>
+<tr>
+<th>Meta</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td></td>
+</tr>
+<tr>
+<td>Link</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>description = "Kata 2"
+date = "2021-03-23"
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<p>https://www.codewars.com/kata/56269eb78ad2e4ced1000013</p>
+<h3 id="my-solution_10">My solution</h3>
+<pre><code class="language-javascript">function findNextSquare(sq) {
+  let base = Math.sqrt(sq);
+  return base % 1 != 0 ? -1 : (base+1)*(base+1);
+}
+```+++
+## Kata 21: Reverse or rotate?&quot;
+description = &quot;Kata 21&quot;
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+date = &quot;2021-04-16&quot;
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+https://www.codewars.com/kata/56b5afb4ed1f6d5fb0000991/
+
+### My solution
+
+```javascript
+function revrot(str, sz) {
+  const isSumCubesDivsBy2 = (i) =&gt; i.reduce((acc,curr)=&gt;acc+(+curr)**3, 0) % 2 == 0;
+  let res=[];
+  if (sz==0) return &quot;&quot;;
+  for (let i=0; i&lt;=str.length; i+=sz)
+       res.push(str.slice(i,i+sz).split(&quot;&quot;));
+  if (res[res.length-1].length&lt;sz) res=res.slice(0,res.length-1);
+  return res.map(i=&gt;{
+    return isSumCubesDivsBy2(i) ? i.reverse().join(&quot;&quot;) : [...i.slice(1), i[0]].join(&quot;&quot;)
+  }).join(&quot;&quot;)
+}
+</code></pre>
+<p>I solved the problem, but in comparison to best answer i see that i don't have enough experience (yet) about organizing code.
+This thing with 3 const functions looks and reads wonderful. Code in solution below is clean and clear.
+Mine is spaghetti in comparison, but i will try to improve.
+Also i see that i named function wrong here...</p>
+<h2 id="best-different-solution">Best different solution</h2>
+<pre><code class="language-javascript">function revrot(str, sz) {
+  if (sz &lt; 1 || sz &gt; str.length)
+    return '';
+
+  let reverse = s =&gt; s.split('').reverse().join('');
+  let rotate  = s =&gt; s.slice(1) + s.slice(0, 1);
+  let sum_cubes = c =&gt; c.split('').reduce((a, b) =&gt; a + +b ** 3, 0);
+
+  return str
+    .match(new RegExp('.{' + sz + '}', 'g'))
+    .map(c =&gt; sum_cubes(c) % 2 ? rotate(c) : reverse(c))
+    .join('');
+}
+</code></pre>
+<h2 id="kata-22-sorting-liquids">Kata 22: Sorting liquids"</h2>
+<table>
+<thead>
+<tr>
+<th>Meta</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td></td>
+</tr>
+<tr>
+<td>Link</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>description = "Kata 22"
+tags = [
+    "simple",
+    "development",
+]
+date = "2021-04-17"
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<p>https://www.codewars.com/kata/562e6df5cf2d3908ad00019e/solutions/javascript</p>
+<h3 id="my-solution_11">My solution</h3>
+<pre><code class="language-javascript">function separateLiquids(glass) {   /// glass[V][H]
+  const density = {
+    H : 1.36,
+    W : 1.00,
+    A : 0.87,
+    O : 0.80
+  }
+  const chunkArray = (arr, size) =&gt;
+  arr.length &gt; size
+    ? [arr.slice(0, size), ...chunkArray(arr.slice(size), size)]
+    : [arr];
+  const srt = (a,b) =&gt; density[a] == density[b] ? 0 : (density[a] &gt; density[b] ? 1 : -1)
+
+  if (!glass.length) return [];
+  return chunkArray(glass.reduce((a,b)=&gt;[...a, ...b]).sort(srt), glass[0].length)
+}
+</code></pre>
+<p>This is <strong>really</strong> cool kata. Thing is you go through several stages here, from first assumptions to first complicatetd atom conditions to final simple and very cool solution
+Before i understand that we have "left" direction and this could mean we just need to sort flat array, i spend some time on trying to get what kinds of limits we have here.</p>
+<p>Spend some time on thinking about edge cases... Like</p>
+<pre><code>00++
+++++
++111
+</code></pre>
+<p>But, after checking tests it turned out that this exact solution was expected. And all is good.</p>
+<p>Also caught something new from other solutions:</p>
+<h2 id="best-different-solution_1">Best different solution</h2>
+<pre><code class="language-javascript">const density = { H: 1.36, W: 1, A: .87, O: .8 };  
+
+const separateLiquids = glass =&gt;
+  [].concat(...glass)
+    .sort((a, b) =&gt; density[a] - density[b])
+    .reduce((arr, v, i) =&gt; {
+      if (!(i % glass[0].length)) arr.push([]);
+      arr[arr.length - 1].push(v);
+      return arr;
+    }, []);
+</code></pre>
+<p>Cool thing here is sorting function, which i relaly like and didn't come up with by myself.</p>
+<h2 id="kata-23-meeting">Kata 23: Meeting"</h2>
+<table>
+<thead>
+<tr>
+<th>Meta</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td></td>
+</tr>
+<tr>
+<td>Link</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>description = "Kata 23"
+date = 2021-04-20
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<p>https://www.codewars.com/kata/59df2f8f08c6cec835000012</p>
+<h3 id="my-solution_12">My solution</h3>
+<pre><code class="language-javascript">const srt = (a,b) =&gt;{
+  [anew,bnew] = [a.split(&quot;:&quot;), b.split(&quot;:&quot;)];
+  return (anew[1] == bnew[1]) ? anew[0].localeCompare(bnew[0]) : anew[1].localeCompare(bnew[1])
+}
+const meeting = (s) =&gt; {
+  let res = s.toUpperCase().split(&quot;;&quot;).sort(srt)
+      .reduce((acc,cur)=&gt;{
+        let names=cur.split(&quot;:&quot;);
+        return `${acc}(${names[1]}, ${names[0]})`
+      },&quot;&quot;)
+  return res;
+}
+</code></pre>
+<p>It was very interesting to solve this problem, as path is very straightforward, but im not that good in splitting main task into simple ones; in this case i managed to do this without any issues.</p>
+<p>And then...</p>
+<h2 id="best-another-solution_5">Best another solution</h2>
+<pre><code class="language-javascript">function meeting(s) {
+  let string = s.toUpperCase().split(';')
+                .map(x =&gt; x.split(':').reverse().join(', '))
+                .sort()
+                .join(')(')
+  return '(' + string + ')'
+}
+</code></pre>
+<p>I must have checked if sort works or not for this case without additional things. Looks like it works</p>
+<h2 id="kata-24-stonks">Kata 24: Stonks"</h2>
+<table>
+<thead>
+<tr>
+<th>Meta</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td></td>
+</tr>
+<tr>
+<td>Link</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>description = "Kata 24"
+date = 2021-04-21
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<p>https://www.codewars.com/kata/597ef546ee48603f7a000057</p>
+<h3 id="my-solution_13">My solution</h3>
+<pre><code class="language-javascript">const count_sum = (arr)=&gt;arr.reduce((a,b)=&gt;a+b,0)
+
+function getMostProfitFromStockQuotes(quotes) {
+  let max = Math.max(...quotes);
+  let income_arr = quotes.slice(0, quotes.indexOf(max));
+  let income = max * income_arr.length - count_sum(income_arr);
+  if (income &lt; 0) income = 0;
+  let left = quotes.slice(quotes.indexOf(max)+1);
+  return (left.length == 0) ? income  :
+    income + getMostProfitFromStockQuotes(left);
+}
+</code></pre>
+<p>Main problem here was to understand the logic behind the task. At first i didn't get how results in tests are evaluated.
+First assumtion was to evaluate array of max profits from existing stocks - like [sum(what_is_before), maxitem], then select maximum.
+Next step was - understanding that it will need recursive behavior, because after first sell there might be another sells also. So i spent some time on setting up recursion for this.
+Next, result didn't align with tests) BTW, i thought there are (may be) better strategy... But no, my result was lower than in tests.
+Then i understood algorytm (which is just find max on current array, count income, repeat on all array which is to the right from current max)</p>
+<p>Cool kata, interesting if there is any algorythm</p>
+<h2 id="best-another-solution_6">Best another solution</h2>
+<p>Absolute brilliant soltuion, day will come and i will understand logic behind it</p>
+<pre><code class="language-javascript">function getMostProfitFromStockQuotes(quotes) {
+  let top=-Infinity;
+  return quotes.reduceRight((p,v)=&gt;{
+    if(top&lt;v) top=v;
+    return p+top-v;
+  }, 0);
+}
+```+++
+## Kata 25 Matching and Substituting&quot;
+description = &quot;Kata 25&quot;
+date = 2021-04-23
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+https://www.codewars.com/kata/59de1e2fe50813a046000124/
+
+### My solution
+
+```javascript
+function change(s, prog, version) {
+  let prog_regex = /(?&lt;=Program).*\n/gm;
+  let author_regex = /(?&lt;=Author: ).*\n/gm;
+  let phone_regex = /(?&lt;=Phone: ).*\n/gm
+  let valid_phone_regex = /\+1-\d{3}-\d{3}-\d{4}\n/gm
+  let corp_regex = /Corporation: .*\n/gm;
+  let date_regex = /(?&lt;=Date: )(.*)\n/gm;
+  let vers_regex = /(?&lt;=Version: ).*\n/gm;
+  let valid_vers_regex = /(?&lt;=Version: )\d+\.\d+\n/gm
+  let level_regex = /Level: .*/gm;
+
+  return !(valid_phone_regex.test(s) &amp;&amp; valid_vers_regex.test(s)) ? &quot;ERROR: VERSION or PHONE&quot; :
+     s.replace(prog_regex, `: ${prog} `)
+      .replace(author_regex, `g964 `)
+      .replace(corp_regex, ``)
+      .replace(phone_regex, `+1-503-555-0090 `)
+      .replace(date_regex, &quot;2019-01-01 &quot;)
+      .replace(vers_regex, (match) =&gt; match == 2.0 ? &quot;2.0&quot; : version)
+      .replace(level_regex, &quot;&quot;)
+}
+</code></pre>
+<p>Ok there are several lessons under this kata.</p>
+<ul>
+<li>Positive/negative lookaheads/lookbehinds are cool. Spent some time learning them. Very cool</li>
+<li>Capturing groups - last time i was far less effective with them.</li>
+<li>Orginizing code: this time i decided to make this template-task self explanatory and clean</li>
+</ul>
+<p>These were straightforward lessons. Less stright is something veri interesting - you shouldn't do kata before fully understanding COMPLETE description. Also, this kata shows that actually transforming original task description can make work much easier. Its fun because this is exactly what i learned as part of software development process... First you always tring to understand if the task should be SO complicated. Usually its actually not.</p>
+<h2 id="best-another-solution_7">Best another solution</h2>
+<pre><code class="language-javascript">function change(s, prog, version) {
+
+  if (/Version: 2.0\n/.test(s))
+    version = '2.0';
+
+  if (!/Phone: (\+1-\d{3}-\d{3}-\d{4})\n/.test(s) || !/Version: \d+\.\d+\n/.test(s))
+    return 'ERROR: VERSION or PHONE';
+
+  return `Program: ${prog} Author: g964 Phone: +1-503-555-0090 Date: 2019-01-01 Version: ${version}`;
+
+}
+```+++
+## Kata 26: Dont Eat Last Cake&quot;
+description = &quot;Kata 26&quot;
+date = 2021-04-24T13:46:33+03:00
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+### My solution
+
+```javascript
+// Constructor (your Captain Obivious)
+function Player(){}
+// Decide who move first - player or opponent (true if player)
+
+const winning = (i) =&gt; {
+  let left = (i - 2) % 4;
+  return (left == 0) ? 0 : left;
+}
+
+Player.prototype.firstmove = function(cakes){
+  if (cakes==1) return false;
+  if (cakes==2) return false;
+  return (winning(cakes) == 0) ? false : true;
+}
+// Decide your next move
+Player.prototype.move = function(cakes, last){
+  let left = winning(cakes);
+  if (last == 0) return left;
+
+  //obvious moves
+  if (cakes==3 &amp;&amp; last!=1) return 1;
+   if (cakes==4 &amp;&amp; last!=3) return 3;
+   if (cakes==5 &amp;&amp; last !=3) return 3;
+
+  if (left == 3 &amp;&amp; last == 1) return 3;  
+  if (left == 2 &amp;&amp; last == 2) return 1;
+  if (left == 1 &amp;&amp; last == 3) return 1;
+
+    //sub cases of 2:2
+  if (left == 3 &amp;&amp; last == 2) return 3;
+  if (left == 2 &amp;&amp; last == 3) return 2;
+}
+</code></pre>
+<p>This was by far most complicated one. I didn't manage to solve it in one day, started trying to find pattern and similar games. Actually i determined correct connected algorythm - https://en.wikipedia.org/wiki/Sprague%E2%80%93Grundy_theorem
+But, all described games were actually games without abanoded "same move". I dind't manage to understand how to turn this into mex function which is described by that theorem... Finally i decided just to get it from logic and completely analyzed games with n&lt;14. It helped to determin algorythm. Some time was spend on understanding how to do "series" of steps in reaction of opponent goinf out from loosing position.</p>
+<p>Interesting that in this case</p>
+<p>I will definitely read more about that theorem. BTW, i need to re-read math books from my childhood. I really think i will find something interesting there - mainly bu Gardner.</p>
+<h2 id="best-another-solution_8">Best another solution</h2>
+<pre><code class="language-javascript">
+```+++
+## Kata 27 Backspaces Processing&quot;
+description = &quot;Kata 27&quot;
+date = 2021-04-25
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+https://www.codewars.com/kata/5727bb0fe81185ae62000ae3/
+
+### My solution
+
+```javascript
+function cleanString(s) {
+      return s.split(&quot;&quot;)
+        .reduce((acc,curr)=&gt;curr == &quot;#&quot; ? acc.slice(0,-1) : `${acc}${curr}`,&quot;&quot;)
+};
+</code></pre>
+<p>This was cool and simple. Clear example of reduce usage. Can't come up with something simpler.</p>
+<h2 id="best-another-solution_9">Best another solution</h2>
+<p>Strange, but crowd thinks that push/pop solution is better. Its a mistake. Mine or their...+++</p>
+<h2 id="kata-28-how-much">Kata 28: How Much"</h2>
+<p>description = "Kata 28"
+date = 2021-04-26T10:48:20+03:00
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<p>https://www.codewars.com/kata/55b4d87a3766d9873a0000d4</p>
+<h3 id="my-solution_14">My solution</h3>
+<p>Ok so 6th level for me now is usually not more than 20 mins. I should use it only if know that i will not have a chance to work on bigger kata today.</p>
+<p>This was simple.. Just needed some math googling</p>
+<pre><code class="language-javascript">function howmuch(m, n) {
+    if (m&gt;n) [m,n] = [n,m];
+    let arr = [];
+    for (let x = m; x&lt;=n; x++)
+      if ((x-1)%9==0 &amp;&amp; (x-2)%7==0)
+        arr = [...arr,[`M: ${x}`,`B: ${(x-2)/7}`,`C: ${(x-1)/9}`]]    
+    return arr;
+}
+</code></pre>
+<h2 id="best-another-solution_10">Best another solution</h2>
+<p>Ok so this is better solution, had to think how to get max better...</p>
+<pre><code class="language-javascript">function howmuch(m, n) {
+  let out = [], h = Math.max(m, n);
+  for(let i = Math.max(Math.min(m, n), 37); i &lt;= h; i++) {
+    //This is the stupidest data &quot;structure&quot; I've ever seen
+    if((i - 1) % 9 == 0 &amp;&amp; (i - 2) % 7 == 0) out.push([`M: ${i}`, `B: ${(i - 2) / 7}`, `C: ${(i - 1) / 9}`]);
+  }
+  return out;
+}
+```+++
+## Kata 29 Lazy Evaluation&quot;
+description = &quot;Kata 29&quot;
+date = 2021-04-28
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+
+### My solution
+
+```javascript
+function Lazy() {
+  let functions = [];
+  let obj = {
+    add(...args) {
+      functions.push(args);
+      return this;
+    },
+    invoke(target) {
+      return functions
+        .reduce((acc, cur)=&gt; cur[0].apply(null, [...cur.slice(1), ...acc]),target)
+    }
+  }
+  return obj;
+}
+</code></pre>
+<p>Finally! This is what expected when people say "functional programming". Very-very cool kata, not as complicted algorytm, but about managing functions. Was very interesting. Found half of solution by request "how to chain functions", but i had problems with understanding how to pass function with arguments to the list. Solution was to store all of it - like array of [function, ...args] in internal array of functions.
+Cool! Want to do such tasks more</p>
+<p>Oh and i forgot about constructor. But.. there was no init procedure, so probably that's fine.</p>
+<h2 id="best-another-solution_11">Best another solution</h2>
+<pre><code class="language-javascript">class Lazy {
+  constructor() {
+    this.fnChain = [];
+  }
+  add(fn, ...args) {
+    this.fnChain.push(fn.bind(this, ...args));
+    return this;
+  }
+  invoke(args) {
+    return this.fnChain.reduce((args, fn) =&gt; fn(...args), args);
+  }
+}
+```+++
+## Kata 3: Camel Case&quot;
+description = &quot;Kata 21&quot;
+date = &quot;2021-03-24&quot;
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+https://www.codewars.com/kata/517abf86da9663f1d2000003
+
+### My solution
+
+```javascript
+function toCamelCase(str){
+  return str.split(/[-_]/).map((x,i) =&gt; i==0 ? x : x.charAt(0).toUpperCase() + x.slice(1)).join(&quot;&quot;)
+}
+</code></pre>
+<p>Main problem here for me was:
+* several separators for split (now it know i can use regexp in split(re))
+* to exclude first character. Solved with checking index,
+but i think better way may be is to use reduce. But i didn't find how to do it...
+Example of something similar is here:</p>
+<pre><code class="language-javascript">var products = [{ Name: 'milk', price: 2.50, Category: 'groceries' }, { Name: 'shirt', price: 10, Category: 'clothing' }, { Name: 'apples', price: 5, Category: 'groceries' }],
+    categories = products.reduce(function (r, a) {
+        if (!~r.indexOf(a.Category)) {
+            r.push(a.Category);
+        }
+        return r;
+    }, []);
+</code></pre>
+<p>// this solution is also cool, based completely on regexps. Didn't know i can use function in replace:</p>
+<pre><code class="language-javascript">function toCamelCase(str){
+      var regExp=/[-_]\w/ig;
+      return str.replace(regExp,function(match){
+            return match.charAt(1).toUpperCase();
+       });
+}
+</code></pre>
+<p>+++</p>
+<h2 id="kata-30-advanced-pig-latin">Kata 30: Advanced Pig Latin"</h2>
+<p>description = "Kata 30"
+date = 2021-04-29
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<h3 id="my-solution_15">My solution</h3>
+<pre><code class="language-javascript">function piggify(w) {
+  let isCapital = w[0] === w[0].toUpperCase();
+  let regex = /(^[b-df-hj-np-tv-z]*)([aeoui]\w*)(\W*)/;
+  let piggified = w.toLowerCase().replace(regex, (_,p1,p2,p3)=&gt;{
+    return (p1.length==0) ? `${p2}way${p3}` : `${p2}${p1}ay${p3}`
+  })
+   return isCapital ? `${piggified[0].toUpperCase()}${piggified.slice(1)}` : piggified
+}
+function translate(sentence) {
+  return sentence.split(&quot; &quot;).map(piggify).join(&quot; &quot;);
+};
+</code></pre>
+<p>Look i spent some time trying to avoid regexp here) But soon understood that this adds ineviteable complexity. Thing is its manipulating chunks of string - exactly regexp is probably the best fit.</p>
+<h2 id="best-another-solution_12">Best another solution</h2>
+<p>Looks like i didn't think of 2 things - first that i don't necessarly need to split whole sentence into words, it would work without this redundant function. Second is - i don't need 3 groups! Punctuation just stays same as before. So i need only 1st and 2nd group to solve this. Also isCapital may be is redundant, but i used it to make code more readable.</p>
+<p>Also if conditions - not sure i understand thin line between when to use ternary operator and when i can't use it</p>
+<pre><code class="language-javascript">function translate(sentence) {
+  return sentence.replace(/\b([bcdfghjklmnpqrstvwxyz]*)(\w+)\b/gi, function(_, first, rest) {
+    if (first) {
+      if (first[0] == first[0].toUpperCase()) rest = rest[0].toUpperCase() + rest.slice(1)
+    } else {
+      first = 'w'
+    }
+    return rest + first.toLowerCase() + 'ay'
+  })
+};
+```+++
+## Kata 31: New Holiday&quot;
+description = &quot;Kata 31&quot;
+date = 2021-05-06
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+https://www.codewars.com/kata/58982a388927f70d8b000111/
+
+### My solution
+
+```javascript
+function holiday(x, weekDay, month, yearNumber) {
+  const months = [&quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;, &quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;, &quot;November&quot;, &quot;December&quot;];
+  const leapyear = ((yearNumber % 100 === 0) ? ( yearNumber % 400 === 0) : (yearNumber % 4 === 0));
+  const daysinmonths = [31,  leapyear ? 29 : 28 , 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  let days = [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;];
+
+  let firstday = (new Date(`${month} 1, ${yearNumber}`)).getDay();
+  let daysnormalized = [...days.slice(firstday), ...days.slice(0, firstday)];
+  let dmax = daysinmonths[months.indexOf(month)];
+  let d = (x-1)*7 + daysnormalized.indexOf(weekDay) + 1;
+  return d &gt; dmax ? -1 : d
+}
+</code></pre>
+<p>Kewl! Spent some time trying to understand how to start it. My idea is to get weekday for 1st of given year/month, then count weeks and some leftover days (between starting day and given day). It was hard to start splitting this task. I suspect all date tasks are problematic like this one</p>
+<h2 id="best-another-solution_13">Best another solution</h2>
+<pre><code class="language-javascript">function holiday(x, weekDay, month, yearNumber) {
+
+  const months = [ &quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;, &quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;, &quot;November&quot;, &quot;December&quot; ];
+  const days_of_week = [ &quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot; ];
+
+  const idx_month = months.indexOf(month);
+  const idx_dow = days_of_week.indexOf(weekDay);
+
+  let date = new Date(yearNumber, idx_month, 1);
+
+  if (date.getDay() &gt; idx_dow)
+    x++;
+
+  date.setDate(date.getDate() + idx_dow - date.getDay() + 7 * (x - 1));
+
+  return date.getMonth() === idx_month ? date.getDate() : -1;
+
+}
+</code></pre>
+<p>Cool thing here is solving leap year problem, i subsituted 29/28 based on counting what is given year, but in this example its done by just getting if we're still in current month or moved to next (it's based on internal js Date mechanizms). This is probably better approach than mine...+++</p>
+<h2 id="kata-32-string-incrementer">Kata 32 String Incrementer"</h2>
+<p>description = "Kata 32"
+date = 2021-05-14
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<p>https://www.codewars.com/kata/54a91a4883a7de5d7800009c/</p>
+<h3 id="my-solution_16">My solution</h3>
+<pre><code class="language-javascript">const inc_zeros = (n) =&gt; {
+  let r = `${+n+1}`;
+  while (r.length&lt;n.length)
+    r = `0${r}`;
+  return r
+}
+
+function incrementString (strng) {
+  return strng.replace(/(\D*)(\d*$)/, (_,p1,p2,offset,s) =&gt; {
+     console.log(p1,p2);
+     if (p2.length == 0) return `${p1}1`;
+     if (p2.length == p2.replace(/^0+/, '').length) return `${p1}${+p2+1}`
+      else return `${p1}${inc_zeros(p2)}`;
+   } );
+}
+</code></pre>
+<p>It was hard kata for me, becasue i didn't manage to find beautiful solution. I feel like mine is bad, but i cant figure out what to refactor. Checking best solutions....</p>
+<h2 id="best-another-solution_14">Best another solution</h2>
+<pre><code class="language-javascript">function incrementString(input) {
+  if(isNaN(parseInt(input[input.length - 1]))) return input + '1';
+  return input.replace(/(0*)([0-9]+$)/, function(match, p1, p2) {
+    var up = parseInt(p2) + 1;
+    return up.toString().length &gt; p2.length ? p1.slice(0, -1) + up : p1 + up;
+  });
+}
+</code></pre>
+<p>This is very clever usage of regexps:</p>
+<pre><code class="language-javascript">function incrementString(input) {
+  return input.replace(/([0-8]?)(9*)$/, function(s, d, ns) {
+      return +d + 1 + ns.replace(/9/g, '0');
+    });
+}
+```+++
+## Kata 33 Simple Fun Best Match&quot;
+description = &quot;Kata&quot;
+date = 2021-05-15T15:03:14+03:00
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+### My solution
+
+```javascript
+function bestMatch(ALAHLYGoals, zamalekGoals) {
+  const srt = (a,b)=&gt;{
+    if (a[0]==b[0] &amp;&amp; a[1]&gt;b[1]) return -1;
+    if (a[0]==b[0] &amp;&amp; a[1]&lt;b[1]) return 1;
+    if (a[0]==b[0] &amp;&amp; a[1]==b[1] &amp;&amp; a[2]&gt;b[2]) return 1;
+    if (a[0]==b[0] &amp;&amp; a[1]==b[1] &amp;&amp; a[2]&lt;b[2]) return -1;
+    return a[0]&gt;b[0] ? 1 : -1;
+  }
+  return zamalekGoals.map((e,i)=&gt;[ALAHLYGoals[i]-e, e, i]).sort(srt)[0][2];
+}
+</code></pre>
+<h2 id="best-another-solution_15">Best another solution</h2>
+<pre><code class="language-javascript">function bestMatch(aGoals, bGoals) {
+   return bGoals
+     .reduce((best, goals, i) =&gt; {
+       const diff = aGoals[i] - goals;
+       return !best.d || (diff &lt; best.d || (diff === best.d &amp;&amp; goals &gt; best.v)) ? {d: diff, v: goals, i} : best;
+      }, {d: null, g: null, i: null}).i;
+}
+```+++
+## Kata 34 Sort Strings Vowels&quot;
+description = &quot;Kata 34&quot;
+date = 2021-05-16T22:44:54+03:00
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+https://www.codewars.com/kata/5d2d0d34bceae80027bffddb
+
+### My solution
+
+```javascript
+const srt = (a,b) =&gt; {
+   if (a.length == b.length) return 0;
+   return a.length &gt; b.length ? -1 : 1            
+  }
+
+const longestsubstr = (e) =&gt; (e.match(/[aeiouAEIOU]+/gm) || []).sort(srt)[0];
+
+function sortStringsByVowels(strings){
+  return strings.sort((a,b) =&gt; srt((longestsubstr(a) || []),(longestsubstr(b) || [])));
+}
+</code></pre>
+<p>Well i think my solution is clearer) definitely i must have refactored my sorting function. But im really happy i managed to get the general approach. Also i think it's not 6, its definitely 5 kyu...</p>
+<h2 id="best-another-solution_16">Best another solution</h2>
+<pre><code class="language-javascript">function sortStringsByVowels(ss) {
+  const gl=s=&gt;(Math.max(...(s.match(/[aeiou]+/ig)||[]).map(r=&gt;r.length)))
+  return ss.sort((a,b)=&gt;gl(b)-gl(a));
+}
+```+++
+## Kata 35 Snake Collision&quot;
+description = &quot;Kata 35&quot;
+date = 2021-05-18
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+### My solution
+
+https://www.codewars.com/kata/5ac616ccbc72620a6a000096/solutions/javascript
+
+```javascript
+function snakeCollision(g, m){
+  let snake = [[0, 0],[0, 1],[0, 2]];
+  let d = &quot;R&quot;;
+  let steps = 0;
+
+  const isFood = (cords) =&gt; g[cords[0]][cords[1]]=='$';
+  const isSnake = (cords) =&gt; snake.some((e)=&gt;(e[0]==cords[0] &amp;&amp; e[1]==cords[1]));
+  const isBorder = (cords) =&gt; (cords[0] &lt; 0 || cords[0] &gt;= 13 || cords[1] &lt; 0 || cords[1] &gt;= 21);
+  const head = () =&gt; snake[snake.length-1];
+  const move = (d) =&gt; {
+      let dest;
+
+      switch (d) {
+          case &quot;D&quot;: dest = [head()[0]+1, head()[1]]; break;
+          case &quot;R&quot;: dest = [head()[0], head()[1]+1]; break;
+          case &quot;U&quot;: dest = [head()[0]-1, head()[1]]; break;
+          case &quot;L&quot;: dest = [head()[0], head()[1]-1]; break;
+      }
+
+      if (isBorder(dest)) return false;
+      if (isSnake(dest)) return false;
+      snake.push(dest);
+
+      if (!isFood(dest))
+        snake.shift();
+      if (isFood(dest))        
+        g[dest[0]] = [...g[dest[0]].slice(0, dest[1]), '-', ...g[dest[0]].slice(dest[1]+1)].join(&quot;&quot;);   
+      return true;
+  }
+
+  for (const cmd of m.split(&quot; &quot;)) {
+    if (+cmd == cmd) {
+      let canMove = true;
+      for (let i = 0; i&lt;+cmd; i++) {
+        canMove = move(d);
+        steps++;
+        if (!canMove) return [head(),steps]
+      }  
+    } else d = cmd;
+  }
+  return [head(),steps]
+}
+</code></pre>
+<p>I actually spend some time on this. Definitely most complicated kata by now, reason is simple - it just has too many limitations which needs to be solved. Problem for me here is the fact that i don't know if i solved it right... I tried to be as clean-coded and straight-forward as possible, but still can't figure oout what can be improved.</p>
+<p>Im not sure about existence of head() function, and im not that fond of main flow loop...
+Still im happy i managed to finish it. Cool.+++</p>
+<h2 id="kata-36-merge-strings-checker">Kata 36 Merge Strings Checker"</h2>
+<p>description = "Kata 36"
+date = 2021-05-17
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++
+https://www.codewars.com/kata/54c9fcad28ec4c6e680011aa</p>
+<h3 id="my-solution_17">My solution</h3>
+<pre><code class="language-javascript">function isMerge(s, part1, part2) {
+    const takeFromFirst = (s,arr1,arr2) =&gt; {
+      for (let i in s) {
+        if (s[i]==arr1[i] &amp;&amp; s[i]==arr2[i] ) continue;
+        if (s[i]==arr1[i] &amp;&amp; s[i]!==arr2[i]) return true;
+        if (s[i]!==arr1[i] &amp;&amp; s[i]==arr2[i]) return false;
+      }
+    }
+    let [part1arr, part2arr] = [part1.split(&quot;&quot;),
+                                part2.split(&quot;&quot;)];
+    for (let i in s) {
+      if (s[i] == part1arr[0] &amp;&amp; s[i] == part2arr[0]) {
+        console.log(&quot;we have very complicated situation here&quot;);
+        if (takeFromFirst(s.slice(i), part1arr, part2arr))
+          part1arr.shift();
+        else
+          part2arr.shift();
+        continue;
+      } else if (s[i] == part1arr[0])
+        part1arr.shift();
+      else if (s[i] == part2arr[0])
+        part2arr.shift();
+      else return false;
+    }  
+    if (part1arr.length&gt;0 || part2arr.length&gt;0) return false;
+    return true;
+}
+</code></pre>
+<p>Well it was very intersting. I manage to solve it but it ws really tough. I first tried simple and stupid way - sort 1st and concat of test strings. Didn't work like it should be)
+Then i was in the cross - like what to do next? Try to improve sorting or go different way? I chose second, but still not sure it was right decision. Will spend some time trying to understand best solution.</p>
+<p>UPD - finally i got it! I should have solved it with recursion... So stupid))</p>
+<h2 id="best-another-solution_17">Best another solution</h2>
+<p>This one i don't understand at all))</p>
+<pre><code class="language-javascript">function isMerge(s, part1, part2) {
+  return !s ? !(part1 || part2) :
+    s[0] == part1[0] &amp;&amp; isMerge(s.slice(1), part1.slice(1), part2) ||
+    s[0] == part2[0] &amp;&amp; isMerge(s.slice(1), part1, part2.slice(1));
+}
+```+++
+## Kata 37 Traffic Jam&quot;
+description = &quot;Kata 37&quot;
+date = 2021-05-20T14:15:32+03:00
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+https://www.codewars.com/kata/5a26073ce1ce0e3c01000023
+
+### My solution
+
+```javascript
+var trafficJam = function(mainRoad, sideStreets) {
+  let mr = mainRoad.split(&quot;&quot;);
+  let out = sideStreets.reduceRight((acc,curr,i)=&gt;{
+    if (curr!=&quot;&quot;) {
+      curr.split(&quot;&quot;).reverse().forEach((e,ei)=&gt;mr.splice(i+ei*2+1, 0, e));
+      return mr;
+    } else
+      return mr;
+  }, mr);
+  return out.slice(0,mr.indexOf(&quot;X&quot;)+1).join(&quot;&quot;);
+}
+</code></pre>
+<p>That was the most amazing moment in my (not-yet-started) dev career. Really.
+I spent almost whole day on this kata. Couldn't understand the approach. Tried different ones.</p>
+<p>Main moment here is when i started to investigate, if all separate side roads addding can be somehow atomic - not like 1 car by 1 car, but whole line of cars.</p>
+<p>With approach "pop from every not-empty array", i couldn't come up with idea how to use reduce; but if we do 1-by-1 side road, reduce will fit.</p>
+<p>But it didn't work, so i wrote the function, it didn't solve. Also, pattern of generated string was different. So - trying different order, or may be even those insertions can't be atomic?</p>
+<p>And then i remember that there is reduceRight function, may be it's already available in this env?... And yes and YES!!! All tests passed, except one issue (reverse order of side roads), which i solved a bit later...</p>
+<h2 id="best-another-solution_18">Best another solution</h2>
+<p>in javascript i see no such solution. Mine is most simple and beautiful.
+)))+++</p>
+<h2 id="kata-38-which-are-in">Kata 38 Which Are In"</h2>
+<p>description = "Kata"
+date = 2021-05-21T12:25:49+03:00
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<p>https://www.codewars.com/kata/550554fd08b86f84fe000a58/</p>
+<h3 id="my-solution_18">My solution</h3>
+<pre><code class="language-javascript">function inArray(array1,array2){
+  return array1.filter(e =&gt; array2.some(str=&gt;str.indexOf(e) != -1)).sort((a,b)=&gt;a.localeCompare(b))
+}
+</code></pre>
+<p>Cool, that was really simple)
++++</p>
+<h2 id="kata-39-chess-fun-cell-color">Kata 39 Chess Fun Cell Color"</h2>
+<p>description = "Kata 39"
+date = 2021-05-24
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<p>https://www.codewars.com/kata/5894134c8afa3618c9000146</p>
+<h3 id="my-solution_19">My solution</h3>
+<pre><code class="language-javascript">function chessBoardCellColor(cell1, cell2) {
+  const parity = (cell) =&gt; (&quot;_ABCDEFGH&quot;.indexOf(cell.split(&quot;&quot;)[0]) + Number(cell.split(&quot;&quot;)[1])) % 2 == 0;
+  return parity(cell1) === parity(cell2)
+}
+</code></pre>
+<p>Ok, that was simple. Can't find better solution in solutions.
++++</p>
+<h2 id="kata-4-trailing-zeros">Kata 4: Trailing Zeros"</h2>
+<p>description = "Kata 4"
+date = 2021-04-23
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<p>https://www.codewars.com/kata/52f787eb172a8b4ae1000a34/train/javascript</p>
+<h3 id="my-solution_20">My solution</h3>
+<pre><code class="language-javascript">function zeros (n) {
+  let factors5 = []
+  let num = 1;
+  do
+    factors5 = [...factors5, num *=5];
+  while (num&lt;n);
+  return factors5.reduce((counter, item)=&gt; counter += Math.floor(n / item), 0)
+}
+</code></pre>
+<p>Very cool cata, but its pure math, its not that much dev here.
+I tried 3 approaches - first generate array of digits and then delete all except 2,5 and 0. Too big array. 12s timeout/
+2nd approach was - find how many terms i have - of 2 and 5 and 0. Works with big problem,failed after 100 (because of 25)
+Solved it only by finding solutioon outside - that we have anough factors 2, so we need only how much 5s, 25s, 125s we have there
+Overengineered, generated array of factors5 and then reduce on it</p>
+<h2 id="best-another-solution_19">Best another solution</h2>
+<pre><code class="language-javascript">function zeros (n) {
+  var zs = 0;
+  while(n&gt;0){
+    n=Math.floor(n/5);
+    zs+=n
+  }
+  return zs;
+}
+```+++
+## Kata 40 Last Survivor 2&quot;
+description = &quot;Kata 40&quot;
+date = 2021-05-25
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+### My solution
+
+```javascript
+function lastSurvivors(str) {
+  const hasDuplicates = (arr) =&gt; new Set(arr).size !== arr.length;
+  let str_arr = str.split(&quot;&quot;).map(x=&gt;x.charCodeAt(0));
+  while (hasDuplicates(str_arr)) {
+    for (const c of str_arr) {
+      [first,last] = [str_arr.indexOf(c), str_arr.lastIndexOf(c)]
+      if (first !== last) {
+        str_arr[first] = (c == 122) ? 97 : str_arr[first] + 1;
+        str_arr.splice(last, 1);
+        break;
+      }        
+    }
+  }
+   return str_arr.map(x=&gt;String.fromCharCode(x)).join(&quot;&quot;);
+}
+</code></pre>
+<p>Ok so i spent some time on this. Main problem is that i tried to solve this kata with ES6 abilities - but i failed. Problem is that we need several rimes to look through array - and i can't understand how can i do it with reduce</p>
+<p>But, obvious refactor, which i found in other best solution - do away with char codes. I could just create an array of lowcase letters and deal with its array indexes - this is clearer and simpler than solution which i used</p>
+<p>BTW, now i think this whole charcodes is my 2000s legacy) Thats how i solved things in my high school. Now its different times...</p>
+<h2 id="best-another-solution_20">Best another solution</h2>
+<pre><code class="language-javascript">function lastSurvivors(str) {
+
+  const alpha = 'abcdefghijklmnopqrstuvwxyz';
+
+  let next = str;
+
+  do {
+    str = next;
+    next = str.replace(/([a-z])(.*?)\1/g, (_, a, b) =&gt; alpha[(alpha.indexOf(a) + 1) % 26] + b);
+  } while (str !== next)
+
+  return str;
+
+}
+```+++
+## Kata 41 Compose Functions T Combinator&quot;
+description = &quot;Kata 41&quot;
+date = 2021-05-27
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+https://www.codewars.com/kata/51f9d3db4095e07f130001ee
+
+### My solution
+
+```javascript
+var compose = function(n, ...fns) {
+  return (fns.length == 0) ? n : fns.reduce((acc,curr)=&gt;curr(acc),n);
+}
+</code></pre>
+<p>Ok so im amaxed how simple and quick i solved this task. Deadly simple for me, as im really get used to using reduce day-to-day. Plus, with ES6 its really simple to cut array-like arguments...</p>
+<h2 id="best-another-solution_21">Best another solution</h2>
+<p>Another way of solving it (didn't thinka about it) is actually using recursion, which is also +- simple to understand, even from desciption of this kata. Cool!</p>
+<pre><code class="language-javascript">const compose = (x, f, ...rest) =&gt; f ? compose(f(x), ...rest) : x;
+</code></pre>
+<p>+++</p>
+<h2 id="kata-42-sudoku-solver">Kata 42 Sudoku Solver"</h2>
+<p>description = "Kata"
+date = 2021-06-09T10:20:53+03:00
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<h3 id="my-solution_21">My solution</h3>
+<p>Well that was... fuckingfuck. Very tough for me. Lots of coll moments. And all other things))</p>
+<pre><code class="language-javascript">function sudoku(puzzle) {
+  let gaps = [], solution = [], last = 1, pushed = false;
+  puzzle.forEach((nested,i) =&gt; nested.forEach((item,j) =&gt; {
+    if (item === 0) gaps.push([j,i])
+  }));
+
+  while (solution.length &lt; gaps.length) {
+    let trySolution, x, y;
+    [x,y] = [gaps[solution.length][0], gaps[solution.length][1]];
+    pushed = false;
+    for (let i = last; i &lt;= 9; i++) {
+      trySolution = renderSudoku([...puzzle.map(nested =&gt; [...nested])], gaps, solution, i);
+      if (validateSolution(trySolution)){
+        solution.push(i);
+        pushed = true;
+        break;
+      }
+    }
+    if (!pushed) {
+      if (solution[solution.length - 1] == 9)
+        while (solution[solution.length - 1] == 9) solution.pop();
+      solution[solution.length - 1] += 1;
+    }  
+  }
+  return renderSudoku([...puzzle.map(nested =&gt; [...nested])], gaps, solution, null);
+}
+
+function renderSudoku(board, gaps, solution, num){
+  if (num) solution = [...solution, num];
+  solution.forEach((e,i)=&gt;{
+     board[gaps[i][1]][gaps[i][0]] = e;
+  })
+  return board;
+}
+
+function validateSolution(board){
+  function isunique(arr) {
+    let filtered = arr.filter(x =&gt; x !== 0);
+    return filtered.every((e,i) =&gt; filtered.indexOf(e) === i);
+  }
+
+  function checkRows(){
+    return board.every(row =&gt; isunique(row));
+  }
+  function checkCols(){
+    return board[0].map((e, i) =&gt; board.map(row =&gt; row[i])).every(col =&gt; isunique(col));
+  }
+  function checkBoxes(){
+    let boxes = [];
+    for (let i = 0; i &lt;= 6; i += 3)
+      for (let j = 0; j &lt;= 6; j += 3)
+        boxes.push([...board[j].slice(i,i+3),
+                    ...board[j+1].slice(i,i+3),
+                    ...board[j+2].slice(i,i+3)]);
+    return boxes.every(box =&gt; isunique(box));
+  }
+  return checkRows() &amp;&amp; checkCols() &amp;&amp; checkBoxes();
+}
+</code></pre>
+<h2 id="best-another-solution_22">Best another solution</h2>
+<p>I will read this at night))) Copyrights to</p>
+<pre><code class="language-javascript">function calculateGridRange(gridNumber) {
+  // summary:
+  //  Calculates the min and max row and column numbers associated
+  //  with a grid number.
+  // gridNumber: Number
+  //  Expects a zero-based number (0-8)
+  // return: Object
+  //  An object containing the min and max row and column numbers.
+  var rowMin = Math.floor(gridNumber / 3) * 3,
+      columnMin = gridNumber % 3 * 3;
+
+  return {
+    row: {
+      min: rowMin,
+      max: rowMin + 2
+    },
+    column: {
+      min: columnMin,
+      max: columnMin + 2
+    }
+  };
+}
+
+function calculateGridNumber(row, column) {
+  // summary:
+  //  Calculate the grid number that corresponds
+  //  to the grid in which a row and column pair reside.
+  // row: Number
+  //  Expects a zero-based number (0-8)
+  // column: Number
+  //  Expects a zero-based number (0-8)
+  // return: Number
+  //  The grid number in which this row and column pair reside.
+  return (Math.floor(row / 3) * 3) + Math.floor(column / 3);
+}
+
+function parse(puzzle) {
+  // summary:
+  //  Takes a sudoku puzzle and creates a number map based on the
+  //  numbers' locations within the board.  Also provides methods for
+  //  dynamically generating maps.
+  // puzzle: Array[]
+  //  Array of arrays.  Each element in the parent array is a row.
+  //  The index of the element in the parent array, corresponds to
+  //  the row number.
+  //  Each element in a child array is a number in that row, and its
+  //  index corresponds to the column number in which it resides.
+  // return: Object
+  //  Object containing number map, which is a mapping of where every
+  //  number currently resides in the board, contains a method for determining if there are still empty spaces on the board, contains method for retrieving the empty spaces in a grid, and contains a method for retrieving the missing numbers for a grid.
+  // Example:
+  //  Number Map structure.  Example for number &quot;1&quot;:
+  //  {
+  //    &quot;1&quot;: {
+  //      &quot;1&quot;: { // Row number
+  //        &quot;3&quot;: { // Column number
+  //          rowNumber: 1,
+  //          columnNumber: 3,
+  //          gridNumber: 1
+  //        }
+  //      }
+  //    }
+  //  }
+  var numberMaps = {},
+      row, i, j,
+      number, numberMap,
+      columnMax, map;
+
+  for (i = 0; i &lt; 9; i++) {
+    row = puzzle[i];
+
+    for (j = 0; j &lt; 9; j++) {
+
+      number = row[j];        
+      if (number) {
+        numberMap = numberMaps[number];
+
+        if (!numberMap) {
+          numberMap = numberMaps[number] = {};
+        }
+
+        map = numberMap[i];
+
+        if (!map) {
+          map = numberMap[i] = {};
+        }
+
+        map[j] = {
+          rowNumber: i,
+          columnNumber: j,
+          gridNumber: calculateGridNumber(i, j)
+        };
+
+      }
+    }
+  }
+
+  return {
+    numberMaps: numberMaps,
+    hasEmptySpaces: function () {
+      // summary:
+      //  Determines if there are empty spaces on the entire board.
+      // returns: Boolean
+      var i, j;
+
+      for (i = 0; i &lt; 9; i++) {
+        for (j = 0; j &lt; 9; j++) {
+          if (!puzzle[i][j]) {
+            return true;
+          }
+        }
+      }
+
+      return false;
+    },
+    getEmptySpacesByGridNumber: function (gridNumber) {
+      // summary:
+      //  Retrieve the empty spaces (spaces filled with the number 0)
+      //  for a provided grid.
+      // gridNumber: Number
+      //  Expects a zero-based number (0-8)
+      // return: Object
+      //  A row/column mapping of empty spaces.
+      var emptySpaces = {},
+          range = calculateGridRange(gridNumber),
+          row = range.row,
+          column = range.column,
+          rowMin = row.min,
+          rowMax = row.max,
+          columnMin = column.min,
+          columnMax = column.max,
+          i, z, space;
+
+      for (i = rowMin; i &lt; rowMax + 1; i++) {
+        for (z = columnMin; z &lt; columnMax + 1; z++) {
+          if (!puzzle[i][z]) {
+
+            space = emptySpaces[i];
+
+            if (!space) {
+              space = emptySpaces[i] = {};
+            }
+
+            space[z] = true;
+          }
+        }
+      }
+
+      return emptySpaces;
+    },
+    getMissingNumbersByGrid: function (gridNumber) {
+      // summary:
+      //  Returns all of the missing numbers for a given grid as
+      //  a concatenated string.
+      // gridNumber: Number
+      //  Expects a zero-based number (0-8)
+      // return: String
+      var range = calculateGridRange(gridNumber),
+          row = range.row,
+          column = range.column,
+          rowMin = row.min,
+          rowMax = row.max,
+          columnMin = column.min,
+          columnMax = column.max,
+          missingNumbers = &quot;123456789&quot;,
+          i, j;
+
+      for (i = rowMin; i &lt; rowMax + 1; i++) {
+        for (j = columnMin; j &lt; columnMax + 1; j++) {
+          number = puzzle[i][j];
+
+          if (number) {
+            missingNumbers = missingNumbers.replace(number, &quot;&quot;);
+          }
+        }
+      }
+
+      return missingNumbers;
+    }
+  };
+}
+
+function crossHatch(gridNumber, maps, puzzle) {
+  // summary:
+  //  Performs a cross hatch of a number to a grid's empty spaces.
+  //  When a number is already on the board, and its location
+  //  intersects with a row/column in the grid, that grid is removed
+  //  from the available possibilities for placing a number.
+  //  When only one possibility remains for a number, it is placed.
+  //  If more than one possibility exists, the number is skipped.
+  var missingNumbers = maps.getMissingNumbersByGrid(gridNumber).split(&quot;&quot;),
+      total = missingNumbers.length,
+      gridRange = calculateGridRange(gridNumber),
+      row = gridRange.row,
+      column = gridRange.column,
+      rowMin = row.min,
+      rowMax = row.max,
+      columnMin = column.min,
+      columnMax = column.max,
+      number, numberMap, i, j, rowMap, rowNumber, map,
+      columnNumber, availableSpaces, availableRows, availableColumns;
+
+  for (i = 0; i &lt; total; i++) {
+    number = missingNumbers[i];
+    numberMap = maps.numberMaps[number];
+    availableSpaces = maps.getEmptySpacesByGridNumber(gridNumber);
+
+    for (rowNumber in numberMap) {
+      rowMap = numberMap[rowNumber];
+
+      if (rowNumber &gt;= rowMin &amp;&amp; rowNumber &lt;= rowMax) {                                                      
+        if (availableSpaces[rowNumber]) {
+          delete availableSpaces[rowNumber];
+        }
+      }
+
+      for (columnNumber in rowMap) {          
+        if (columnNumber &gt;= columnMin &amp;&amp; columnNumber &lt;= columnMax) {
+          for (j = rowMin; j &lt; rowMax + 1; j++) {
+            if (availableSpaces[j]) {
+              delete availableSpaces[j][columnNumber];
+
+              if (!Object.keys(availableSpaces[j]).length) {
+                delete availableSpaces[j];
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // Converting the keys of the availableSpaces (which will be row numbers where a number can go)
+    // into an array.  We can then check the length of this array to ensure that only one
+    // possibile row exists for this number in a grid.
+    availableRows = Object.keys(availableSpaces);
+    if (availableRows.length === 1) {
+      // Convert the keys of the availableSpaces[availableRows[0]] (which will be the column numbers where
+      // a number can go) into an array.  We can then check the length of this array, to ensure that only one
+      // possible column exists for this number in a grid.  If there is only one possible column, we have
+      // eliminated all other possibilities for this number in this grid, so we can place it.
+      availableColumns = Object.keys(availableSpaces[availableRows[0]]);
+      if (availableColumns.length === 1) {
+        rowNumber = availableRows[0];
+        columnNumber = availableColumns[0];
+
+        // Convert to a true number because the test expects the array to contain only numbers.
+        puzzle[rowNumber][columnNumber] = parseInt(number, 10);
+
+        // Update the number map to include the new location of this placed number.
+        map = numberMap[rowNumber];
+
+        if (!map) {
+          map = numberMap[rowNumber] = {};
+        }
+
+        map[columnNumber] = {
+          rowNumber: availableRows[0],
+          columnNumber: availableColumns[0],
+          gridNumber: gridNumber
+        };
+      }
+    }
+  }
+}
+
+function sudoku(puzzle) {
+  // summary:
+  //  Parses the puzzle and begins the solve process.
+  // puzzle: Array[]
+  //  Array of arrays.  Each element in the parent array is a row.
+  //  The index of the element in the parent array, corresponds to
+  //  the row number.
+  //  Each element in a child array is a number in that row, and its
+  //  index corresponds to the column number in which it resides.
+  var maps = parse(puzzle),
+      i = 0;
+
+  while (maps.hasEmptySpaces()) {
+    if (i === 9) {
+      i = 0;
+    }
+
+    crossHatch(i, maps, puzzle);
+    i++;
+  }
+
+  return puzzle;
+}
+```+++
+## Kata 43 Sudoku Validator&quot;
+description = &quot;Kata&quot;
+date = 2021-06-09T10:21:02+03:00
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+### My solution
+
+```javascript
+function validSolution(board){
+  function isunique(arr) {
+    let filtered = arr.filter(x =&gt; x !== 0);
+    return filtered.every((e,i) =&gt; filtered.indexOf(e) === i);
+  }
+
+  function checkRows(){
+    return board.every(row =&gt; isunique(row));
+  }
+  function checkCols(){
+    return board[0].map((e, i) =&gt; board.map(row =&gt; row[i])).every(col =&gt; isunique(col));
+  }
+  function checkBoxes(){
+    let boxes = [];
+    for (let i = 0; i &lt;= 6; i += 3)
+      for (let j = 0; j &lt;= 6; j += 3)
+        boxes.push([...board[j].slice(i,i+3),
+                    ...board[j+1].slice(i,i+3),
+                    ...board[j+2].slice(i,i+3)]);
+    return boxes.every(box =&gt; isunique(box));
+  }
+  return checkRows() &amp;&amp; checkCols() &amp;&amp; checkBoxes();
+}
+</code></pre>
+<h2 id="best-another-solution_23">Best another solution</h2>
+<p>Need to check this one - lots of reduce, all as i like</p>
+<pre><code class="language-javascript">function validSolution(board){
+  var validSet = s =&gt; s.size == 9 &amp;&amp; !s.has(0);
+  var rowSet = i =&gt; board[i].reduce((s,v) =&gt; s.add(v), new Set());
+  var columnSet = i =&gt; board.reduce((s,v) =&gt; s.add(v[i]), new Set());
+  var boxSet = ([r,c]) =&gt; board.slice(r,r+3).reduce((s,v) =&gt; v.slice(c,c+3).reduce((s,v) =&gt; s.add(v), s), new Set());
+  var boxCorner = i =&gt; [Math.floor(i / 3) * 3,(i % 3) * 3];
+  for (var i = 0; i &lt; 9; i++)
+    if ( !validSet(rowSet(i)) || !validSet(columnSet(i)) || !validSet(boxSet(boxCorner(i))) )
+      return false;
+  return true;
+}
+```+++
+## Kata 5 Decode Morse&quot;
+description = &quot;Kata&quot;
+date = 2021-03-29
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+https://www.codewars.com/kata/54b724efac3d5402db00065e
+
+### My solution
+
+```javascript
+decodeMorse = function(morseCode){
+  return morseCode.split(&quot;   &quot;).map(word=&gt;word.split(&quot; &quot;).map(ch=&gt;MORSE_CODE[ch]).join(&quot;&quot;)).join(&quot; &quot;).trim();
+}
+</code></pre>
+<p>Problem is internal map. I guess for best practices, it would be much better
+if i had an internal function for decoding separate letters - much readable,
+and i found such solution at 1st place among best practices</p>
+<h2 id="best-another-solution_24">Best another solution</h2>
+<pre><code class="language-javascript">decodeMorse = function(morseCode){
+  return morseCode
+    .trim()
+    .split(/  | /)
+    .map( (code) =&gt; MORSE_CODE[code] || ' ')
+    .join('');
+}
+```+++
+## Kata 6 Grandmother Walk&quot;
+description = &quot;Kata&quot;
+date = 2021-03-31
+tags = [
+    &quot;simple&quot;,
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;main&quot;
++++
+
+### My solution
+
+```javascript
+function isValidWalk(walk) {
+  return walk.length == 10 &amp;&amp;
+    walk.filter(x=&gt;x=='n').length-walk.filter(x=&gt;x=='s').length == 0 &amp;&amp;
+    walk.filter(x=&gt;x=='e').length-walk.filter(x=&gt;x=='w').length == 0 ? true : false;
+}
+</code></pre>
+<p>// First tried to solve it via reducing array - using its items as commands
+// then went for some coffee and understand that there is no sense in it,
+//i can isolate each separate dimension and just count its ++ and --.
+// So task is 3 conditions now and became very simple.</p>
+<p>// No other solutions today, i didn't find anything interesting.
+//Maybe, counting commands could be extracted to separate function
++++</p>
+<h2 id="kata-7-break-camelcase">Kata 7: Break Camelcase"</h2>
+<p>description = "Kata 7"
+date = 2021-04-01
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<p>https://www.codewars.com/kata/5208f99aee097e6552000148</p>
+<h3 id="my-solution_22">My solution</h3>
+<pre><code class="language-javascript">function solution(string) {
+    return string.split(&quot;&quot;)
+      .reduce((acc,c)=&gt; c.toLowerCase()!=c ? acc+&quot; &quot;+c : acc+c, &quot;&quot;)
+}
+</code></pre>
+<h2 id="best-another-solution_25">Best another solution</h2>
+<p>I know i know its regexp. Capturing groups, lookahead probably and $1 $2.
+But i wanted to train reduce, its the only higher order function, which i don't "feel" yet.
+But i definitely feel its very powerful.</p>
+<p>Solution came suprisingly fast, i just had to remember how to return acc. BTW, correct namings helped, need to remember this - use acc, curr, i, arr - this helps to wrtie "return" statement accordingly.+++</p>
+<h2 id="kata-8-rule-of-divisibility-by-13">Kata 8 Rule of divisibility by 13"</h2>
+<p>description = "Kata 8"
+date = 2021-04-03
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<p>https://www.codewars.com/kata/564057bc348c7200bd0000ff</p>
+<h3 id="my-solution_23">My solution</h3>
+<pre><code class="language-javascript">let seq=[1,10,9,12,3,4];
+
+function thirt(n) {
+  let nNew = n.toString().split(&quot;&quot;).reverse().reduce((acc,curr,index)=&gt;{
+    return acc += +curr*seq[index % 6];
+   }, 0);
+  if (n == nNew) return n;
+  else {    
+    return thirt(nNew);
+  }
+}
+</code></pre>
+<p>Here i really liked my idea about seq[index % 6]. Task is to apply some fixed sequence to long list of didgits (i don't know what is length of this list).
+I just take all seprate digits and apply element of sequence with index % 6. Need to remember this approach...+++</p>
+<h2 id="kata-9-common-denominator">Kata 9 Common Denominator"</h2>
+<p>description = "Kata 9"
+date = 2021-04-04
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "main"
++++</p>
+<p>https://www.codewars.com/kata/54d7660d2daf68c619000d95</p>
+<h3 id="my-solution_24">My solution</h3>
+<pre><code class="language-javascript">function convertFrac(lst){
+  const lcm = (a,b) =&gt; a/gcd(a,b)*b;
+  const gcd = (a,b) =&gt; b==0 ? a : gcd (b, a % b);
+  let commonDenom = lst.map(x=&gt;x[1]).reduce((acc,curr)=&gt;lcm(acc,curr), 1);
+  return lst.reduce((acc,curr)=&gt; `${acc}(${curr[0]*commonDenom / curr[1]},${commonDenom})`,&quot;&quot;)
+}
+</code></pre>
+<p>I'm very proud of my reduce usage, its very cool in this case. Also it was interesting to try again gcd recursion.
+I hope i will remember algorythm once. At least i remember gcd/lcm terms.+++</p>
+<h2 id="leetcode-dynamic-programming-climbing-stairs">Leetcode - Dynamic Programming - Climbing Stairs"</h2>
+<p>description = "Kata"
+date = 2023-03-30T11:40:33+03:00
+tags = [
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "dynamic"
++++</p>
+<h2 id="problem">Problem</h2>
+<p>Climbing stairs problem:
+<a href="https://leetcode.com/explore/interview/card/top-interview-questions-easy/97/dynamic-programming/569/">link to task</a></p>
+<h3 id="my-solution_25">My solution</h3>
+<p>This is general dynamic programming problem, which i meet very often. There are modificatioons of course, but this one is most often used i guess</p>
+<p>Problem is that basic recoursive solution leads to O(n2) time. Because for each node we start recursion again and again...
+Solutiuon for this is actually caching: base next steps on prvious ones. Stairs list contains solutions for previous number of stairs - which eliminates duplicate calculations.</p>
+<p>And next step here is to see that actually results of this function is Fibonacci sequence - so move to regular Fibonacci solution</p>
+<p>And next step is to remember that there are more efficient algorythms to fin Fibonacci numbers</p>
+<p>{{&lt; highlight python &gt;}}
+def climbStairs(self, n):
+    """
+    if n &lt; 3:
+        return n</p>
+<pre><code>stair = [0] * (n + 1)
+stair[1] = 1
+stair[2] = 2
+for i in range(3, n + 1):
+    stair[i] = stair[i - 1] + stair[i - 2]    
+return stair[n]
+</code></pre>
+<p>{{&lt;/ highlight &gt;}}
++++</p>
+<h2 id="kata-leetcode-maxsubarray">Kata Leetcode Maxsubarray"</h2>
+<p>description = "Kata"
+date = 2023-03-31T10:31:46+03:00
+tags = [
+    "simple",
+    "development",
+]
+categories = [
+    "codewars",
+]
+menu = "dynamic"
++++</p>
+<h2 id="problem_1">Problem</h2>
+<p>You need to find subarray with maximum sum. Main idea of solutions is this:</p>
+<p>Bruteforce approach -
+    - iterate through each element,
+    - find maximum starting from this element to each of the following
+2 loops, both are N at maximum, so - O(n2)</p>
+<p>Simple and intuitive suggestion can imoprove this complexity to O(n)!</p>
+<h2 id="kadane-algoryhtm">Kadane Algoryhtm</h2>
+<p>Lets iterate through each element. For each element, local maximum (of all subarrays between index 0 and current) can be achieved by comparison only 2 maxes - [previous subarray, current element] and [current element]. We can definitely say this way, because maximum for [previous subarray] is already solved during previuos iterations! If we know all local maximums for each element, we can determine global maximum, just by comparing local ones</p>
+<p>So, instead of counting this subarrays maximums again and again, we use our previous siolutions in each new iteration.</p>
+<h3 id="my-solution-kadane-algorythm">My solution - Kadane algorythm</h3>
+<p>{{&lt; highlight python &gt;}}
+    def maxSubArray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        local_max = - float("inf")
+        global_max = - float("inf")
+        for e in nums:
+            local_max = max(e, e + local_max)
+            if global_max &lt; local_max:
+                global_max = local_max
+        return global_max</p>
+<pre><code>
+## Divide and Conquer Approach
+
+To solve the problem, generally we need to find 2 numbers - start and end index of maximum subarray. This is what causes O(n x n) in brute-force approach.
+
+In this method, for any subarray, we can split it into 2 halves. Max subarray can be:
+    - either completely in left side,
+    - or completely in right side,
+    - or crossing center (index by which we splitted subarray)
+For 1 and 2, we can just recursively call the same function. For last one, main advantage of this is that we can split this point into to: left and right, and we KNOW end point for left max and start point for right one - and the we just sum those 2 maxes - and it will be maximum of subarray, cerossing center line. Because we know this start/end point, task of finding left edge and right edge is linear (maximum (n/2 + n/2) if max_subarray == array).
+Complexity of this soultion is O(n x log(n)). log(n) part is recoursive dividing (same as binary search). n part is linear search of local maximum for subarray, which crosses center.
+
+It is worse than Kadane algoerythm, but it gives an approach which can be used in different algorythms.
+
+## My soultion - Divide and Conquer
+
+def maxSubArray(self, nums):
+    &quot;&quot;&quot;
+    :type nums: List[int]
+    :rtype: int
+    &quot;&quot;&quot;
+    if len(nums) == 1:
+        return nums[0]
+
+    middle_index = len(nums) // 2
+    left_max = self.maxSubArray(nums[:middle_index])
+    right_max =  self.maxSubArray(nums[middle_index:])
+
+    local_max_left = -float(&quot;inf&quot;)
+    acc1 = 0
+    for i in range(middle_index-1, -1, -1):
+        acc1 += nums[i]
+        if acc1 &gt; local_max_left:
+            local_max_left = acc1
+
+    local_max_right = -float(&quot;inf&quot;)
+    acc2 = 0
+    for i in range(middle_index, len(nums), 1):
+        acc2 += nums[i]
+        if acc2 &gt; local_max_right:
+            local_max_right = acc2
+
+    crossing_center_max = local_max_left + local_max_right
+    return max(left_max, right_max, crossing_center_max)
+
++++
+## Leetcode - Dynamic Programming - Robber&quot;
+description = &quot;Kata&quot;
+date = 2023-04-04T13:51:02+03:00
+tags = [
+    &quot;development&quot;,
+]
+categories = [
+    &quot;codewars&quot;,
+]
+menu = &quot;dynamic&quot;
++++
+
+## Problem
+
+House robber problem:
+[link to task](https://leetcode.com/explore/interview/card/top-interview-questions-easy/97/dynamic-programming/576/)
+
+### My solution
+Basically, i struggled how to solve such problems without knowing actual algorythm. You can do bruteforce, of course; but definitely, this is not optimal and really ugly solution. In this case, basic recoursive bruteforce is actually O(2n)!!
+
+Great approach which i found is described here, according to this specific task:
+[here](https://leetcode.com/problems/house-robber/solutions/156523/From-good-to-great.-How-to-approach-most-of-DP-problems)
+
+We start with basic recoursive, than try dynamic approach - store what is calculated in map, then eliminate recoursive, than optimize storage. Will this one in next tasks!
+
+
+```javascript
+class Solution(object):  
+    def rob(self, nums):
+        &quot;&quot;&quot;
+        :type nums: List[int]
+        :rtype: int
+        &quot;&quot;&quot;
+        memo = [0] * (len(nums)+1)
+        print(len(memo), len(nums))
+
+        if not len(nums):
+            return 0
+        if len(nums) == 1:
+            return nums[0]
+
+        memo[0] = 0
+        memo[1] = nums[0]
+        for i in range(len(nums)):
+            memo[i+1] = max(memo[i-1] + nums[i], memo[i])
+            print(memo)
+
+        return memo[i+1]
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/MikhailSpirin" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.top", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.78eede0e.min.js"></script>
+      
+    
+  </body>
+</html>
