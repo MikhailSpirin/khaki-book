@@ -9,6 +9,7 @@ Date: 26082023
 Purpose of this article is to gather information and links about ideas and approaches to  algorithmic art. I'm going to use this article as a reference, as an idea source, as a inspiration.
 
 ## Rainbow Smoke
+
 Very simple idea with stunning results.
 All is described here: http://rainbowsmoke.hu/home
 Also, i find this youtube really useful: [smoking](https://www.youtube.com/watch?v=dVQDYne8Bkc)
@@ -21,6 +22,7 @@ Possible directions
 - Scroll through colorspace (x/y/z) to create animation
 
 ## Packing on plain surface
+
 Idea first appeared to me when i thought of generative city in ortho projection, like in this [insta](https://www.instagram.com/idflood/)
 I need a way to pack obkects on surface, 2d or 3d. For city 2d s fine, i can play later with height of buildings.
 

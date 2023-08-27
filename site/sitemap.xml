@@ -2,32 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/emojis/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/coding/markdown/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/coding/pip/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/coding/python/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mikhailspirin.github.io/khaki-book/coding/challenge/codewars/</loc>
+         <lastmod>2023-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mikhailspirin.github.io/khaki-book/coding/challenge/leetcode/</loc>
+         <lastmod>2023-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mikhailspirin.github.io/khaki-book/electronics/repair/aisynthesisquadvca/</loc>
+         <lastmod>2023-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mikhailspirin.github.io/khaki-book/electronics/repair/alesismicroverb2/</loc>
+         <lastmod>2023-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mikhailspirin.github.io/khaki-book/electronics/repair/samplingmodulator/</loc>
+         <lastmod>2023-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mikhailspirin.github.io/khaki-book/electronics/repair/strymon-aa1/</loc>
+         <lastmod>2023-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mikhailspirin.github.io/khaki-book/electronics/repair/tascamdp003sd/</loc>
+         <lastmod>2023-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mikhailspirin.github.io/khaki-book/electronics/repair/tides2018/</loc>
+         <lastmod>2023-08-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mikhailspirin.github.io/khaki-book/generative/algorithms/</loc>
+         <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/generative/shaders/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2023-08-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

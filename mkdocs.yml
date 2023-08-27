@@ -7,11 +7,21 @@ site_url: https://mikhailspirin.github.io/khaki-book/
 nav:
   - Introduction: index.md
   - Coding:
+    - Challenges:
+        - Codewars: coding/challenge/codewars.md
+        - Leetcode: coding/challenge/leetcode.md
+    - Atom Shortcuts: coding/atom-shortcuts.md
     - Markdown: coding/markdown.md
     - Python: coding/python.md
+    - Python Packages: coding/python-packages.md
     - Pip: coding/pip.md
   - Generative:
+    - Algorithms: generative/algoritms.md
+    - Inspiration: generative/inspiration.md
     - Shaders: generative/shaders.md
+  - Media:
+    - Movies: media/movies.md
+    - Music: media/music.md
 
 
 

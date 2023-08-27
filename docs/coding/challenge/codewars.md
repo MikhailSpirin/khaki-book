@@ -9,6 +9,8 @@ I have a long story about [Codewars](www.codewars.com), i started it with Java, 
 
 # Katas!
 
+---
+
 ## Kata 1: Vowel Count
 
 Meta | Content
@@ -36,9 +38,247 @@ Cool lesson is working with null - this is clever solution:
 const getCount = (str)=>(str.match(/[aeiou]/ig)||[]).length;
 ```
 
+---
+
+## Kata 2: Next Perfect Square
+
+Meta | Content
+-----|-----------
+Date | 2021-03-23
+Link | https://www.codewars.com/kata/56269eb78ad2e4ced1000013
+
+### My solution
+
+```javascript
+function findNextSquare(sq) {
+  let base = Math.sqrt(sq);
+  return base % 1 != 0 ? -1 : (base+1)*(base+1);
+}
+```
+
+---
+
+## Kata 3: Camel Case
+
+Meta | Content
+-----|-----------
+Date | 2021-03-24
+Link | https://www.codewars.com/kata/517abf86da9663f1d2000003
+
+### My solution
+
+```javascript
+function toCamelCase(str){
+  return str.split(/[-_]/).map((x,i) => i==0 ? x : x.charAt(0).toUpperCase() + x.slice(1)).join("")
+}
+```
+
+Main problem here for me was:
+* several separators for split (now it know i can use regexp in split(re))
+* to exclude first character. Solved with checking index,
+but i think better way may be is to use reduce. But i didn't find how to do it...
+Example of something similar is here:
+
+```javascript
+var products = [{ Name: 'milk', price: 2.50, Category: 'groceries' }, { Name: 'shirt', price: 10, Category: 'clothing' }, { Name: 'apples', price: 5, Category: 'groceries' }],
+    categories = products.reduce(function (r, a) {
+        if (!~r.indexOf(a.Category)) {
+            r.push(a.Category);
+        }
+        return r;
+    }, []);
+```
+
+// this solution is also cool, based completely on regexps. Didn't know i can use function in replace:
+```javascript
+function toCamelCase(str){
+      var regExp=/[-_]\w/ig;
+      return str.replace(regExp,function(match){
+            return match.charAt(1).toUpperCase();
+       });
+}
+```
+
+---
+
+## Kata 4: Trailing Zeros
+
+Meta | Content
+-----|-----------
+Date | 2021-04-23
+Link | https://www.codewars.com/kata/52f787eb172a8b4ae1000a34/train/javascript
+
+### My solution
+
+```javascript
+function zeros (n) {
+  let factors5 = []
+  let num = 1;
+  do
+    factors5 = [...factors5, num *=5];
+  while (num<n);
+  return factors5.reduce((counter, item)=> counter += Math.floor(n / item), 0)
+}
+```
+
+Very cool cata, but its pure math, its not that much dev here.
+I tried 3 approaches - first generate array of digits and then delete all except 2,5 and 0. Too big array. 12s timeout/
+2nd approach was - find how many terms i have - of 2 and 5 and 0. Works with big problem,failed after 100 (because of 25)
+Solved it only by finding solutioon outside - that we have anough factors 2, so we need only how much 5s, 25s, 125s we have there
+Overengineered, generated array of factors5 and then reduce on it
+
+## Best another solution
+
+```javascript
+function zeros (n) {
+  var zs = 0;
+  while(n>0){
+    n=Math.floor(n/5);
+    zs+=n
+  }
+  return zs;
+}
+```
+
+---
+
+## Kata 5 Decode Morse
+
+Meta | Content
+-----|-----------
+Date | 2021-03-29
+Link | https://www.codewars.com/kata/54b724efac3d5402db00065e
+
+### My solution
+
+```javascript
+decodeMorse = function(morseCode){
+  return morseCode.split("   ").map(word=>word.split(" ").map(ch=>MORSE_CODE[ch]).join("")).join(" ").trim();
+}
+```
+
+Problem is internal map. I guess for best practices, it would be much better
+if i had an internal function for decoding separate letters - much readable,
+and i found such solution at 1st place among best practices
+
+## Best another solution
+
+```javascript
+decodeMorse = function(morseCode){
+  return morseCode
+    .trim()
+    .split(/  | /)
+    .map( (code) => MORSE_CODE[code] || ' ')
+    .join('');
+}
+```
+
+---
+
+## Kata 6 Grandmother Walk
+
+Meta | Content
+-----|-----------
+Date | 2021-03-31
+Link |
+
+### My solution
+
+```javascript
+function isValidWalk(walk) {
+  return walk.length == 10 &&
+    walk.filter(x=>x=='n').length-walk.filter(x=>x=='s').length == 0 &&
+    walk.filter(x=>x=='e').length-walk.filter(x=>x=='w').length == 0 ? true : false;
+}
+```
+
+// First tried to solve it via reducing array - using its items as commands
+// then went for some coffee and understand that there is no sense in it,
+//i can isolate each separate dimension and just count its ++ and --.
+// So task is 3 conditions now and became very simple.
+
+// No other solutions today, i didn't find anything interesting.
+//Maybe, counting commands could be extracted to separate function
+
+---
+
+## Kata 7: Break Camelcase
+
+Meta | Content
+-----|-----------
+Date | 2021-04-01
+Link | https://www.codewars.com/kata/5208f99aee097e6552000148
+
+### My solution
+
+```javascript
+function solution(string) {
+    return string.split("")
+      .reduce((acc,c)=> c.toLowerCase()!=c ? acc+" "+c : acc+c, "")
+}
+```
+
+## Best another solution
+
+I know i know its regexp. Capturing groups, lookahead probably and $1 $2.
+But i wanted to train reduce, its the only higher order function, which i don't "feel" yet.
+But i definitely feel its very powerful.
+
+Solution came suprisingly fast, i just had to remember how to return acc. BTW, correct namings helped, need to remember this - use acc, curr, i, arr - this helps to wrtie "return" statement accordingly.
+
+---
+
+## Kata 8 Rule of divisibility by 13
+
+Meta | Content
+-----|-----------
+Date | 2021-04-03
+Link | https://www.codewars.com/kata/564057bc348c7200bd0000ff
+
+### My solution
+
+```javascript
+let seq=[1,10,9,12,3,4];
+
+function thirt(n) {
+  let nNew = n.toString().split("").reverse().reduce((acc,curr,index)=>{
+    return acc += +curr*seq[index % 6];
+   }, 0);
+  if (n == nNew) return n;
+  else {    
+    return thirt(nNew);
+  }
+}
+```
+
+Here i really liked my idea about seq[index % 6]. Task is to apply some fixed sequence to long list of didgits (i don't know what is length of this list).
+I just take all seprate digits and apply element of sequence with index % 6. Need to remember this approach...+++
+
+---
+
+## Kata 9 Common Denominator
+
+Meta | Content
+-----|-----------
+Date | 2021-04-04
+Link | https://www.codewars.com/kata/54d7660d2daf68c619000d95
 
 
+### My solution
 
+```javascript
+function convertFrac(lst){
+  const lcm = (a,b) => a/gcd(a,b)*b;
+  const gcd = (a,b) => b==0 ? a : gcd (b, a % b);
+  let commonDenom = lst.map(x=>x[1]).reduce((acc,curr)=>lcm(acc,curr), 1);
+  return lst.reduce((acc,curr)=> `${acc}(${curr[0]*commonDenom / curr[1]},${commonDenom})`,"")
+}
+```
+
+I'm very proud of my reduce usage, its very cool in this case. Also it was interesting to try again gcd recursion.
+I hope i will remember algorithm once. At least i remember gcd/lcm terms.
+
+---
 
 ## Kata 10 Sum Maximum Subarray
 
@@ -62,6 +302,8 @@ var maxSequence = function(arr){
 This is another algorytm - Kadane Algorytm, which i have no chance to come up with)) So i just read about it it in wiki and created my understood version of it
 
 nothing that clever in other solutions tho
+
+---
 
 ## Kata 12: Multiply N Primes
 
@@ -92,6 +334,8 @@ function numPrimorial(n){
 I hope i will finally remember Sieve of Eratosthenes algorytm. Each time.. This is very logical question on any interview, i must remember it
 
 Another problem - i know it can be optimized, because i calculate array or primes each time
+
+---
 
 ## Kata 13: Decomposing Factorial
 
@@ -171,25 +415,14 @@ function decomp(n) {
 }
 ```
 
+---
+
 ## Kata 14: Difference Between Arrays"
 
 Meta | Content
 -----|-----------
 Date | 2021-04-08
-Link |
-
-date = 2021-04-09
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
-
-https://www.codewars.com/kata/523f5d21c841566fde000009
+Link | https://www.codewars.com/kata/523f5d21c841566fde000009
 
 ### My solution
 
@@ -211,6 +444,8 @@ function array_diff(a, b) {
 
 i forgot about filter...
 
+---
+
 ## Kata 15: Word of A10n"
 
 Meta | Content
@@ -228,6 +463,8 @@ const abbreviate = (string) => string.replace(/\w+/gim,
 ## Best another solution
 
 Oneliner - which i do like. Cool that my solution is actually almost exactly "best practices" + "clever" solution.
+
+---
 
 ## Kata 16: Count Presses"
 
@@ -253,24 +490,14 @@ Very important in this kata for my POV - how to make it simple and effective, so
 But now i think that simples solution might be better - just additional helper to transform
 layouts to number of presses and store object with "symbol":"number of presses"
 
-## Kata 17: Longest Palindrome"
+---
+
+## Kata 17: Longest Palindrome
 
 Meta | Content
 -----|-----------
-Date |
+Date | 2021-04-12
 Link |
-
-description = "Kata 17"
-date = 2021-04-12
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
 
 ### My solution
 
@@ -321,24 +548,14 @@ Also not sure, but maybe approach which is called dynamic programming could be b
 
 by far - the most complicated task for me
 
+---
+
 ## Kata 18: Statistics
 
 Meta | Content
 -----|-----------
-Date |
+Date | 2021-04-13
 Link |
-
-description = "Kata 18"
-date = 2021-04-13
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
 
 ### My solution
 
@@ -370,24 +587,12 @@ I see no cooler solutions than mine
 Just one additional comment - here i tried to split functionality in different functions, as i try to do clean and pure functions
 No modification of global vars, no complex actions - just one straigntforwad action
 
-## Kata 19 Number to Word"
+## Kata 19 Number to Word
 
 Meta | Content
 -----|-----------
-Date |
+Date | 2021-04-14
 Link |
-
-description = "Kata"
-date = 2021-04-14
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
 
 ### My solution
 
@@ -417,8 +622,8 @@ function number2words(n, result = ""){
 }
 ```
 
-// This task tought me that i really can use recursion in real life, and take this decision naturally. My solution is not perfect,
-// i see that i addded to many conditions - seems that can be done only with 3. But this is MINE solution)
+// This task taught me that i really can use recursion in real life, and take this decision naturally. My solution is not perfect,
+// i see that i added to many conditions - seems that can be done only with 3. But this is MINE solution)
 
 // Probably after refactor i could approach this best solution. This is just a lot of ternary checks + now i see that
 // i don't need object in this task
@@ -444,49 +649,14 @@ function number2words(n){
   }
 ```
 
-## Kata 2: Next Perfect Square"
+---
+
+## Kata 21: Reverse or rotate?
 
 Meta | Content
 -----|-----------
-Date |
-Link |
-
-description = "Kata 2"
-date = "2021-03-23"
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
-
-https://www.codewars.com/kata/56269eb78ad2e4ced1000013
-
-### My solution
-
-```javascript
-function findNextSquare(sq) {
-  let base = Math.sqrt(sq);
-  return base % 1 != 0 ? -1 : (base+1)*(base+1);
-}
-```+++
-## Kata 21: Reverse or rotate?"
-description = "Kata 21"
-tags = [
-    "simple",
-    "development",
-]
-date = "2021-04-16"
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
-
-https://www.codewars.com/kata/56b5afb4ed1f6d5fb0000991/
+Date | 2021-04-16
+Link | https://www.codewars.com/kata/56b5afb4ed1f6d5fb0000991/
 
 ### My solution
 
@@ -503,7 +673,6 @@ function revrot(str, sz) {
   }).join("")
 }
 ```
-
 
 I solved the problem, but in comparison to best answer i see that i don't have enough experience (yet) about organizing code.
 This thing with 3 const functions looks and reads wonderful. Code in solution below is clean and clear.
@@ -528,26 +697,14 @@ function revrot(str, sz) {
 }
 ```
 
-## Kata 22: Sorting liquids"
+---
+
+## Kata 22: Sorting liquids
 
 Meta | Content
 -----|-----------
-Date |
-Link |
-
-description = "Kata 22"
-tags = [
-    "simple",
-    "development",
-]
-date = "2021-04-17"
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
-
-https://www.codewars.com/kata/562e6df5cf2d3908ad00019e/solutions/javascript
+Date | 2021-04-17
+Link | https://www.codewars.com/kata/562e6df5cf2d3908ad00019e/solutions/javascript
 
 ### My solution
 
@@ -598,28 +755,16 @@ const separateLiquids = glass =>
     }, []);
 ```
 
-Cool thing here is sorting function, which i relaly like and didn't come up with by myself.
+Cool thing here is sorting function, which i realy like and didn't come up with by myself.
 
-## Kata 23: Meeting"
+---
+
+## Kata 23: Meeting
 
 Meta | Content
 -----|-----------
-Date |
-Link |
-
-description = "Kata 23"
-date = 2021-04-20
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
-
-https://www.codewars.com/kata/59df2f8f08c6cec835000012
+Date | 2021-04-20
+Link | https://www.codewars.com/kata/59df2f8f08c6cec835000012
 
 ### My solution
 
@@ -656,26 +801,14 @@ function meeting(s) {
 
 I must have checked if sort works or not for this case without additional things. Looks like it works
 
-## Kata 24: Stonks"
+---
+
+## Kata 24: Stonks
 
 Meta | Content
 -----|-----------
-Date |
-Link |
-
-description = "Kata 24"
-date = 2021-04-21
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
-
-https://www.codewars.com/kata/597ef546ee48603f7a000057
+Date | 2021-04-21
+Link | https://www.codewars.com/kata/597ef546ee48603f7a000057
 
 ### My solution
 
@@ -713,21 +846,16 @@ function getMostProfitFromStockQuotes(quotes) {
     return p+top-v;
   }, 0);
 }
-```+++
-## Kata 25 Matching and Substituting"
-description = "Kata 25"
-date = 2021-04-23
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+```
 
-https://www.codewars.com/kata/59de1e2fe50813a046000124/
+---
+
+## Kata 25 Matching and Substituting
+
+Meta | Content
+-----|-----------
+Date | 2021-04-23
+Link | https://www.codewars.com/kata/59de1e2fe50813a046000124/
 
 ### My solution
 
@@ -776,19 +904,16 @@ function change(s, prog, version) {
   return `Program: ${prog} Author: g964 Phone: +1-503-555-0090 Date: 2019-01-01 Version: ${version}`;
 
 }
-```+++
-## Kata 26: Dont Eat Last Cake"
-description = "Kata 26"
-date = 2021-04-24T13:46:33+03:00
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+```
+
+---
+
+## Kata 26: Dont Eat Last Cake
+
+Meta | Content
+-----|-----------
+Date | 2021-04-24T13:46:33+03:00
+Link |
 
 ### My solution
 
@@ -827,32 +952,27 @@ Player.prototype.move = function(cakes, last){
 }
 ```
 
-This was by far most complicated one. I didn't manage to solve it in one day, started trying to find pattern and similar games. Actually i determined correct connected algorythm - https://en.wikipedia.org/wiki/Sprague%E2%80%93Grundy_theorem
+This was by far most complicated one. I didn't manage to solve it in one day, started trying to find pattern and similar games. Actually i determined correct connected algorithm - https://en.wikipedia.org/wiki/Sprague%E2%80%93Grundy_theorem
 But, all described games were actually games without abanoded "same move". I dind't manage to understand how to turn this into mex function which is described by that theorem... Finally i decided just to get it from logic and completely analyzed games with n<14. It helped to determin algorythm. Some time was spend on understanding how to do "series" of steps in reaction of opponent goinf out from loosing position.
 
 Interesting that in this case
 
-I will definitely read more about that theorem. BTW, i need to re-read math books from my childhood. I really think i will find something interesting there - mainly bu Gardner.
+I will definitely read more about that theorem. BTW, i need to re-read math books from my childhood. I really think i will find something interesting there - mainly by Gardner.
 
 ## Best another solution
 
 ```javascript
 
-```+++
-## Kata 27 Backspaces Processing"
-description = "Kata 27"
-date = 2021-04-25
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+```
 
-https://www.codewars.com/kata/5727bb0fe81185ae62000ae3/
+---
+
+## Kata 27 Backspaces Processing
+
+Meta | Content
+-----|-----------
+Date | 2021-04-25
+Link | https://www.codewars.com/kata/5727bb0fe81185ae62000ae3/
 
 ### My solution
 
@@ -866,21 +986,16 @@ function cleanString(s) {
 This was cool and simple. Clear example of reduce usage. Can't come up with something simpler.
 ## Best another solution
 
-Strange, but crowd thinks that push/pop solution is better. Its a mistake. Mine or their...+++
-## Kata 28: How Much"
-description = "Kata 28"
-date = 2021-04-26T10:48:20+03:00
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+Strange, but crowd thinks that push/pop solution is better. Its a mistake. Mine or their...
 
-https://www.codewars.com/kata/55b4d87a3766d9873a0000d4
+---
+
+## Kata 28: How Much
+
+Meta | Content
+-----|-----------
+Date | 2021-04-26
+Link | https://www.codewars.com/kata/55b4d87a3766d9873a0000d4
 
 ### My solution
 Ok so 6th level for me now is usually not more than 20 mins. I should use it only if know that i will not have a chance to work on bigger kata today.
@@ -910,20 +1025,16 @@ function howmuch(m, n) {
   }
   return out;
 }
-```+++
-## Kata 29 Lazy Evaluation"
-description = "Kata 29"
-date = 2021-04-28
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+```
 
+---
+
+## Kata 29 Lazy Evaluation
+
+Meta | Content
+-----|-----------
+Date | 2021-04-28
+Link |
 
 ### My solution
 
@@ -964,70 +1075,16 @@ class Lazy {
     return this.fnChain.reduce((args, fn) => fn(...args), args);
   }
 }
-```+++
-## Kata 3: Camel Case"
-description = "Kata 21"
-date = "2021-03-24"
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
-
-https://www.codewars.com/kata/517abf86da9663f1d2000003
-
-### My solution
-
-```javascript
-function toCamelCase(str){
-  return str.split(/[-_]/).map((x,i) => i==0 ? x : x.charAt(0).toUpperCase() + x.slice(1)).join("")
-}
 ```
 
-Main problem here for me was:
-* several separators for split (now it know i can use regexp in split(re))
-* to exclude first character. Solved with checking index,
-but i think better way may be is to use reduce. But i didn't find how to do it...
-Example of something similar is here:
+---
 
-```javascript
-var products = [{ Name: 'milk', price: 2.50, Category: 'groceries' }, { Name: 'shirt', price: 10, Category: 'clothing' }, { Name: 'apples', price: 5, Category: 'groceries' }],
-    categories = products.reduce(function (r, a) {
-        if (!~r.indexOf(a.Category)) {
-            r.push(a.Category);
-        }
-        return r;
-    }, []);
-```
+## Kata 30: Advanced Pig Latin
 
-// this solution is also cool, based completely on regexps. Didn't know i can use function in replace:
-```javascript
-function toCamelCase(str){
-      var regExp=/[-_]\w/ig;
-      return str.replace(regExp,function(match){
-            return match.charAt(1).toUpperCase();
-       });
-}
-```
-
-
-+++
-## Kata 30: Advanced Pig Latin"
-description = "Kata 30"
-date = 2021-04-29
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+Meta | Content
+-----|-----------
+Date | 2021-04-29
+Link |
 
 ### My solution
 
@@ -1065,21 +1122,14 @@ function translate(sentence) {
     return rest + first.toLowerCase() + 'ay'
   })
 };
-```+++
-## Kata 31: New Holiday"
-description = "Kata 31"
-date = 2021-05-06
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+```
 
-https://www.codewars.com/kata/58982a388927f70d8b000111/
+## Kata 31: New Holiday
+
+Meta | Content
+-----|-----------
+Date | 2021-05-06
+Link | https://www.codewars.com/kata/58982a388927f70d8b000111/
 
 ### My solution
 
@@ -1123,21 +1173,16 @@ function holiday(x, weekDay, month, yearNumber) {
 }
 ```
 
-Cool thing here is solving leap year problem, i subsituted 29/28 based on counting what is given year, but in this example its done by just getting if we're still in current month or moved to next (it's based on internal js Date mechanizms). This is probably better approach than mine...+++
-## Kata 32 String Incrementer"
-description = "Kata 32"
-date = 2021-05-14
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+Cool thing here is solving leap year problem, i subsituted 29/28 based on counting what is given year, but in this example its done by just getting if we're still in current month or moved to next (it's based on internal js Date mechanizms). This is probably better approach than mine...
 
-https://www.codewars.com/kata/54a91a4883a7de5d7800009c/
+---
+
+## Kata 32 String Incrementer
+
+Meta | Content
+-----|-----------
+Date | 2021-05-14
+Link | https://www.codewars.com/kata/54a91a4883a7de5d7800009c/
 
 ### My solution
 
@@ -1159,7 +1204,7 @@ function incrementString (strng) {
 }
 ```
 
-It was hard kata for me, becasue i didn't manage to find beautiful solution. I feel like mine is bad, but i cant figure out what to refactor. Checking best solutions....
+It was hard kata for me, because i didn't manage to find beautiful solution. I feel like mine is bad, but i cant figure out what to refactor. Checking best solutions....
 
 ## Best another solution
 
@@ -1181,19 +1226,16 @@ function incrementString(input) {
       return +d + 1 + ns.replace(/9/g, '0');
     });
 }
-```+++
-## Kata 33 Simple Fun Best Match"
-description = "Kata"
-date = 2021-05-15T15:03:14+03:00
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+```
+
+---
+
+## Kata 33 Simple Fun Best Match
+
+Meta | Content
+-----|-----------
+Date | 2021-05-15
+Link |
 
 ### My solution
 
@@ -1220,21 +1262,16 @@ function bestMatch(aGoals, bGoals) {
        return !best.d || (diff < best.d || (diff === best.d && goals > best.v)) ? {d: diff, v: goals, i} : best;
       }, {d: null, g: null, i: null}).i;
 }
-```+++
-## Kata 34 Sort Strings Vowels"
-description = "Kata 34"
-date = 2021-05-16T22:44:54+03:00
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+```
 
-https://www.codewars.com/kata/5d2d0d34bceae80027bffddb
+---
+
+## Kata 34 Sort Strings Vowels
+
+Meta | Content
+-----|-----------
+Date | 2021-05-16
+Link | https://www.codewars.com/kata/5d2d0d34bceae80027bffddb
 
 ### My solution
 
@@ -1260,19 +1297,16 @@ function sortStringsByVowels(ss) {
   const gl=s=>(Math.max(...(s.match(/[aeiou]+/ig)||[]).map(r=>r.length)))
   return ss.sort((a,b)=>gl(b)-gl(a));
 }
-```+++
-## Kata 35 Snake Collision"
-description = "Kata 35"
-date = 2021-05-18
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+```
+
+---
+
+## Kata 35 Snake Collision
+
+Meta | Content
+-----|-----------
+Date | 2021-05-18
+Link |
 
 ### My solution
 
@@ -1326,20 +1360,17 @@ function snakeCollision(g, m){
 I actually spend some time on this. Definitely most complicated kata by now, reason is simple - it just has too many limitations which needs to be solved. Problem for me here is the fact that i don't know if i solved it right... I tried to be as clean-coded and straight-forward as possible, but still can't figure oout what can be improved.
 
 Im not sure about existence of head() function, and im not that fond of main flow loop...
-Still im happy i managed to finish it. Cool.+++
-## Kata 36 Merge Strings Checker"
-description = "Kata 36"
-date = 2021-05-17
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
-https://www.codewars.com/kata/54c9fcad28ec4c6e680011aa
+Still im happy i managed to finish it. Cool.
+
+---
+
+## Kata 36 Merge Strings Checker
+
+Meta | Content
+-----|-----------
+Date | 2021-05-17
+Link | https://www.codewars.com/kata/54c9fcad28ec4c6e680011aa
+
 ### My solution
 
 ```javascript
@@ -1372,7 +1403,7 @@ function isMerge(s, part1, part2) {
 }
 ```
 
-Well it was very intersting. I manage to solve it but it ws really tough. I first tried simple and stupid way - sort 1st and concat of test strings. Didn't work like it should be)
+Well it was very interesting. I manage to solve it but it ws really tough. I first tried simple and stupid way - sort 1st and concat of test strings. Didn't work like it should be)
 Then i was in the cross - like what to do next? Try to improve sorting or go different way? I chose second, but still not sure it was right decision. Will spend some time trying to understand best solution.
 
 UPD - finally i got it! I should have solved it with recursion... So stupid))
@@ -1387,21 +1418,16 @@ function isMerge(s, part1, part2) {
     s[0] == part1[0] && isMerge(s.slice(1), part1.slice(1), part2) ||
     s[0] == part2[0] && isMerge(s.slice(1), part1, part2.slice(1));
 }
-```+++
-## Kata 37 Traffic Jam"
-description = "Kata 37"
-date = 2021-05-20T14:15:32+03:00
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+```
 
-https://www.codewars.com/kata/5a26073ce1ce0e3c01000023
+---
+
+## Kata 37 Traffic Jam
+
+Meta | Content
+-----|-----------
+Date | 2021-05-20
+Link | https://www.codewars.com/kata/5a26073ce1ce0e3c01000023
 
 ### My solution
 
@@ -1432,21 +1458,16 @@ And then i remember that there is reduceRight function, may be it's already avai
 
 ## Best another solution
 in javascript i see no such solution. Mine is most simple and beautiful.
-)))+++
-## Kata 38 Which Are In"
-description = "Kata"
-date = 2021-05-21T12:25:49+03:00
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+)))
 
-https://www.codewars.com/kata/550554fd08b86f84fe000a58/
+---
+
+## Kata 38 Which Are In
+
+Meta | Content
+-----|-----------
+Date | 2021-05-21
+Link | https://www.codewars.com/kata/550554fd08b86f84fe000a58/
 
 ### My solution
 
@@ -1457,21 +1478,15 @@ function inArray(array1,array2){
 ```
 
 Cool, that was really simple)
-+++
-## Kata 39 Chess Fun Cell Color"
-description = "Kata 39"
-date = 2021-05-24
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
 
-https://www.codewars.com/kata/5894134c8afa3618c9000146
+---
+
+## Kata 39 Chess Fun Cell Color
+
+Meta | Content
+-----|-----------
+Date | 2021-05-24
+Link | https://www.codewars.com/kata/5894134c8afa3618c9000146
 
 ### My solution
 
@@ -1483,65 +1498,15 @@ function chessBoardCellColor(cell1, cell2) {
 ```
 
 Ok, that was simple. Can't find better solution in solutions.
-+++
-## Kata 4: Trailing Zeros"
-description = "Kata 4"
-date = 2021-04-23
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
 
-https://www.codewars.com/kata/52f787eb172a8b4ae1000a34/train/javascript
+---
 
-### My solution
+## Kata 40 Last Survivor 2
 
-```javascript
-function zeros (n) {
-  let factors5 = []
-  let num = 1;
-  do
-    factors5 = [...factors5, num *=5];
-  while (num<n);
-  return factors5.reduce((counter, item)=> counter += Math.floor(n / item), 0)
-}
-```
-
-Very cool cata, but its pure math, its not that much dev here.
-I tried 3 approaches - first generate array of digits and then delete all except 2,5 and 0. Too big array. 12s timeout/
-2nd approach was - find how many terms i have - of 2 and 5 and 0. Works with big problem,failed after 100 (because of 25)
-Solved it only by finding solutioon outside - that we have anough factors 2, so we need only how much 5s, 25s, 125s we have there
-Overengineered, generated array of factors5 and then reduce on it
-
-## Best another solution
-
-```javascript
-function zeros (n) {
-  var zs = 0;
-  while(n>0){
-    n=Math.floor(n/5);
-    zs+=n
-  }
-  return zs;
-}
-```+++
-## Kata 40 Last Survivor 2"
-description = "Kata 40"
-date = 2021-05-25
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+Meta | Content
+-----|-----------
+Date | 2021-05-25
+Link |
 
 ### My solution
 
@@ -1586,21 +1551,16 @@ function lastSurvivors(str) {
   return str;
 
 }
-```+++
-## Kata 41 Compose Functions T Combinator"
-description = "Kata 41"
-date = 2021-05-27
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+```
 
-https://www.codewars.com/kata/51f9d3db4095e07f130001ee
+---
+
+## Kata 41 Compose Functions T Combinator
+
+Meta | Content
+-----|-----------
+Date | 2021-05-27
+Link | https://www.codewars.com/kata/51f9d3db4095e07f130001ee
 
 ### My solution
 
@@ -1617,24 +1577,18 @@ Another way of solving it (didn't thinka about it) is actually using recursion, 
 const compose = (x, f, ...rest) => f ? compose(f(x), ...rest) : x;
 ```
 
+---
 
-+++
-## Kata 42 Sudoku Solver"
-description = "Kata"
-date = 2021-06-09T10:20:53+03:00
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+## Kata 42 Sudoku Solver
+
+Meta | Content
+-----|-----------
+Date | 2021-06-09
+Link |
 
 ### My solution
 
-Well that was... fuckingfuck. Very tough for me. Lots of coll moments. And all other things))
+Well that was... fuckingfuck. Very tough for me. Lots of cool moments. And all other things))
 
 ```javascript
 function sudoku(puzzle) {
@@ -1990,19 +1944,16 @@ function sudoku(puzzle) {
 
   return puzzle;
 }
-```+++
-## Kata 43 Sudoku Validator"
-description = "Kata"
-date = 2021-06-09T10:21:02+03:00
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
+```
+
+---
+
+## Kata 43 Sudoku Validator
+
+Meta | Content
+-----|-----------
+Date | 2021-06-09
+Link |
 
 ### My solution
 
@@ -2048,348 +1999,4 @@ function validSolution(board){
       return false;
   return true;
 }
-```+++
-## Kata 5 Decode Morse"
-description = "Kata"
-date = 2021-03-29
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
-
-https://www.codewars.com/kata/54b724efac3d5402db00065e
-
-### My solution
-
-```javascript
-decodeMorse = function(morseCode){
-  return morseCode.split("   ").map(word=>word.split(" ").map(ch=>MORSE_CODE[ch]).join("")).join(" ").trim();
-}
-```
-
-Problem is internal map. I guess for best practices, it would be much better
-if i had an internal function for decoding separate letters - much readable,
-and i found such solution at 1st place among best practices
-
-## Best another solution
-
-```javascript
-decodeMorse = function(morseCode){
-  return morseCode
-    .trim()
-    .split(/  | /)
-    .map( (code) => MORSE_CODE[code] || ' ')
-    .join('');
-}
-```+++
-## Kata 6 Grandmother Walk"
-description = "Kata"
-date = 2021-03-31
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
-
-### My solution
-
-```javascript
-function isValidWalk(walk) {
-  return walk.length == 10 &&
-    walk.filter(x=>x=='n').length-walk.filter(x=>x=='s').length == 0 &&
-    walk.filter(x=>x=='e').length-walk.filter(x=>x=='w').length == 0 ? true : false;
-}
-```
-
-// First tried to solve it via reducing array - using its items as commands
-// then went for some coffee and understand that there is no sense in it,
-//i can isolate each separate dimension and just count its ++ and --.
-// So task is 3 conditions now and became very simple.
-
-// No other solutions today, i didn't find anything interesting.
-//Maybe, counting commands could be extracted to separate function
-+++
-## Kata 7: Break Camelcase"
-description = "Kata 7"
-date = 2021-04-01
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
-
-https://www.codewars.com/kata/5208f99aee097e6552000148
-
-### My solution
-
-```javascript
-function solution(string) {
-    return string.split("")
-      .reduce((acc,c)=> c.toLowerCase()!=c ? acc+" "+c : acc+c, "")
-}
-```
-
-## Best another solution
-
-I know i know its regexp. Capturing groups, lookahead probably and $1 $2.
-But i wanted to train reduce, its the only higher order function, which i don't "feel" yet.
-But i definitely feel its very powerful.
-
-Solution came suprisingly fast, i just had to remember how to return acc. BTW, correct namings helped, need to remember this - use acc, curr, i, arr - this helps to wrtie "return" statement accordingly.+++
-## Kata 8 Rule of divisibility by 13"
-description = "Kata 8"
-date = 2021-04-03
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
-
-https://www.codewars.com/kata/564057bc348c7200bd0000ff
-
-### My solution
-
-```javascript
-let seq=[1,10,9,12,3,4];
-
-function thirt(n) {
-  let nNew = n.toString().split("").reverse().reduce((acc,curr,index)=>{
-    return acc += +curr*seq[index % 6];
-   }, 0);
-  if (n == nNew) return n;
-  else {    
-    return thirt(nNew);
-  }
-}
-```
-
-Here i really liked my idea about seq[index % 6]. Task is to apply some fixed sequence to long list of didgits (i don't know what is length of this list).
-I just take all seprate digits and apply element of sequence with index % 6. Need to remember this approach...+++
-## Kata 9 Common Denominator"
-description = "Kata 9"
-date = 2021-04-04
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "main"
-+++
-
-https://www.codewars.com/kata/54d7660d2daf68c619000d95
-
-### My solution
-
-```javascript
-function convertFrac(lst){
-  const lcm = (a,b) => a/gcd(a,b)*b;
-  const gcd = (a,b) => b==0 ? a : gcd (b, a % b);
-  let commonDenom = lst.map(x=>x[1]).reduce((acc,curr)=>lcm(acc,curr), 1);
-  return lst.reduce((acc,curr)=> `${acc}(${curr[0]*commonDenom / curr[1]},${commonDenom})`,"")
-}
-```
-
-I'm very proud of my reduce usage, its very cool in this case. Also it was interesting to try again gcd recursion.
-I hope i will remember algorythm once. At least i remember gcd/lcm terms.+++
-## Leetcode - Dynamic Programming - Climbing Stairs"
-description = "Kata"
-date = 2023-03-30T11:40:33+03:00
-tags = [
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "dynamic"
-+++
-
-## Problem
-
-Climbing stairs problem:
-[link to task](https://leetcode.com/explore/interview/card/top-interview-questions-easy/97/dynamic-programming/569/)
-
-### My solution
-
-This is general dynamic programming problem, which i meet very often. There are modificatioons of course, but this one is most often used i guess
-
-Problem is that basic recoursive solution leads to O(n2) time. Because for each node we start recursion again and again...
-Solutiuon for this is actually caching: base next steps on prvious ones. Stairs list contains solutions for previous number of stairs - which eliminates duplicate calculations.
-
-And next step here is to see that actually results of this function is Fibonacci sequence - so move to regular Fibonacci solution
-
-And next step is to remember that there are more efficient algorythms to fin Fibonacci numbers
-
-{{< highlight python >}}
-def climbStairs(self, n):
-    """
-    if n < 3:
-        return n
-
-    stair = [0] * (n + 1)
-    stair[1] = 1
-    stair[2] = 2
-    for i in range(3, n + 1):
-        stair[i] = stair[i - 1] + stair[i - 2]    
-    return stair[n]
-{{</ highlight >}}
-+++
-## Kata Leetcode Maxsubarray"
-description = "Kata"
-date = 2023-03-31T10:31:46+03:00
-tags = [
-    "simple",
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "dynamic"
-+++
-## Problem
-
-You need to find subarray with maximum sum. Main idea of solutions is this:
-
-Bruteforce approach -
-	- iterate through each element,
-	- find maximum starting from this element to each of the following
-2 loops, both are N at maximum, so - O(n2)
-
-Simple and intuitive suggestion can imoprove this complexity to O(n)!
-
-## Kadane Algoryhtm
-
-Lets iterate through each element. For each element, local maximum (of all subarrays between index 0 and current) can be achieved by comparison only 2 maxes - [previous subarray, current element] and [current element]. We can definitely say this way, because maximum for [previous subarray] is already solved during previuos iterations! If we know all local maximums for each element, we can determine global maximum, just by comparing local ones
-
-So, instead of counting this subarrays maximums again and again, we use our previous siolutions in each new iteration.
-
-
-### My solution - Kadane algorythm
-
-{{< highlight python >}}
-    def maxSubArray(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        local_max = - float("inf")
-        global_max = - float("inf")
-        for e in nums:
-            local_max = max(e, e + local_max)
-            if global_max < local_max:
-                global_max = local_max
-        return global_max
-```
-
-## Divide and Conquer Approach
-
-To solve the problem, generally we need to find 2 numbers - start and end index of maximum subarray. This is what causes O(n x n) in brute-force approach.
-
-In this method, for any subarray, we can split it into 2 halves. Max subarray can be:
-	- either completely in left side,
-	- or completely in right side,
-	- or crossing center (index by which we splitted subarray)
-For 1 and 2, we can just recursively call the same function. For last one, main advantage of this is that we can split this point into to: left and right, and we KNOW end point for left max and start point for right one - and the we just sum those 2 maxes - and it will be maximum of subarray, cerossing center line. Because we know this start/end point, task of finding left edge and right edge is linear (maximum (n/2 + n/2) if max_subarray == array).
-Complexity of this soultion is O(n x log(n)). log(n) part is recoursive dividing (same as binary search). n part is linear search of local maximum for subarray, which crosses center.
-
-It is worse than Kadane algoerythm, but it gives an approach which can be used in different algorythms.
-
-## My soultion - Divide and Conquer
-
-def maxSubArray(self, nums):
-    """
-    :type nums: List[int]
-    :rtype: int
-    """
-    if len(nums) == 1:
-        return nums[0]
-
-    middle_index = len(nums) // 2
-    left_max = self.maxSubArray(nums[:middle_index])
-    right_max =  self.maxSubArray(nums[middle_index:])
-
-    local_max_left = -float("inf")
-    acc1 = 0
-    for i in range(middle_index-1, -1, -1):
-        acc1 += nums[i]
-        if acc1 > local_max_left:
-            local_max_left = acc1
-
-    local_max_right = -float("inf")
-    acc2 = 0
-    for i in range(middle_index, len(nums), 1):
-        acc2 += nums[i]
-        if acc2 > local_max_right:
-            local_max_right = acc2
-
-    crossing_center_max = local_max_left + local_max_right
-    return max(left_max, right_max, crossing_center_max)
-
-+++
-## Leetcode - Dynamic Programming - Robber"
-description = "Kata"
-date = 2023-04-04T13:51:02+03:00
-tags = [
-    "development",
-]
-categories = [
-    "codewars",
-]
-menu = "dynamic"
-+++
-
-## Problem
-
-House robber problem:
-[link to task](https://leetcode.com/explore/interview/card/top-interview-questions-easy/97/dynamic-programming/576/)
-
-### My solution
-Basically, i struggled how to solve such problems without knowing actual algorythm. You can do bruteforce, of course; but definitely, this is not optimal and really ugly solution. In this case, basic recoursive bruteforce is actually O(2n)!!
-
-Great approach which i found is described here, according to this specific task:
-[here](https://leetcode.com/problems/house-robber/solutions/156523/From-good-to-great.-How-to-approach-most-of-DP-problems)
-
-We start with basic recoursive, than try dynamic approach - store what is calculated in map, then eliminate recoursive, than optimize storage. Will this one in next tasks!
-
-
-```javascript
-class Solution(object):  
-    def rob(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        memo = [0] * (len(nums)+1)
-        print(len(memo), len(nums))
-
-        if not len(nums):
-            return 0
-        if len(nums) == 1:
-            return nums[0]
-
-        memo[0] = 0
-        memo[1] = nums[0]
-        for i in range(len(nums)):
-            memo[i+1] = max(memo[i-1] + nums[i], memo[i])
-            print(memo)
-
-        return memo[i+1]
 ```
