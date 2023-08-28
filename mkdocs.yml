@@ -25,7 +25,7 @@ nav:
         - JakPlugg uTides: electronics/repair/tides.md
         - Doepfer A-111-2: electronics/repair/doepfer-a111-2.md
   - Generative:
-    - Algorithms: generative/algoritms.md
+    - Algorithms: generative/algorithms.md
     - Inspiration: generative/inspiration.md
     - Shaders: generative/shaders.md
   - Media:

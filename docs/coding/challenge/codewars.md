@@ -5,7 +5,7 @@ Date: 26082023
 ---
 # Intro
 
-I have a long story about [Codewars](www.codewars.com), i started it with Java, continued with JS, now im training Python and SQL. For me, its the best source of interesting algorithmic tasks. Return to it time to time...
+I have a long story about [Codewars](http://www.codewars.com), i started it with Java, continued with JS, now im training Python and SQL. For me, its the best source of interesting algorithmic tasks. Return to it time to time...
 
 # Katas!
 

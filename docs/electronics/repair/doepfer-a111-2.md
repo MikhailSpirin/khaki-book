@@ -14,16 +14,16 @@ Anyway, mostly modules had a protection, so they just didn't turn on; except for
 ### Thinking
 First of all, i noticed that main sound source in this case is CEM3340 chip and oscillograph showed that it's not able to start for some reason - no output on all 4 outs. I started by trying to find faulty parts; googled for basic 3340 connection schematic and checked all parts around IC.
 
-![Cap](doepfer4.jpg)
+![Cap](img/doepfer4.jpg)
 
 First, this cap got me worried so i substituted it; no luck unfortunately.
 
-![Cap](doepfer3.jpg)
+![Cap](img/doepfer3.jpg)
 
 Then i founf problems with this linear voltage regulator, instead of 10V it gave smth like 0.25V on output (according to datasheet). Substituted and tested, but still it didn't solve the problem.
 
-![Cap](doepfer1.jpg)
-![Cap](doepfer2.jpg)
+![Cap](img/doepfer1.jpg)
+![Cap](img/doepfer2.jpg)
 
 My last idea was that wrong polarity got to IC and therefore one of the options is to substitute IC. I even soldered basic CEM3340 schematic and tested IC in it with nio succeess - no sound. So my last option was to substitute it!
 
