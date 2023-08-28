@@ -58,7 +58,7 @@ Bruteforce approach -
 
 Simple and intuitive suggestion can imoprove this complexity to O(n)!
 
-## Kadane Algoryhtm
+## Kadane Algoiyhtm
 
 Lets iterate through each element. For each element, local maximum (of all subarrays between index 0 and current) can be achieved by comparison only 2 maxes - [previous subarray, current element] and [current element]. We can definitely say this way, because maximum for [previous subarray] is already solved during previuos iterations! If we know all local maximums for each element, we can determine global maximum, just by comparing local ones
 

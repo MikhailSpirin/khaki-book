@@ -1,6 +1,6 @@
 ---
 title: "Befaco Sampling Modulator"
-date: 2023-05-16T15:29:46+03:00
+date: 2023-05-16
 draft: false
 ---
 
@@ -13,4 +13,3 @@ And...
 Sorry, don't have photo, but that pain which i had there - worth adding this post.
 
 Fiunally, all is working well. This 1-year problem finally resoled. Very satisfying!
-

@@ -1,6 +1,6 @@
 ---
 title: "Strymon Aa.1 repair. First Post!"
-date: 2023-03-29T11:01:49+03:00
+date: 2023-03-29
 draft: false
 ---
 
@@ -8,7 +8,7 @@ This will be my first post. I really-really enjoy electronics. It is something m
 
 ### Broken stuff - visual inspection
 
-![Broken](aa1-1.jpeg)
+![Broken](img/aa1-1.jpeg)
 
 One of input jacks is definitely broken. It is not regular one,  so i tried to find subsittute- and yes! I found it locally. So replacing it.
 
@@ -22,7 +22,7 @@ I used general IC check technique - check diode junctions, like [here](https://w
 
 Working perfectly!
 
-![PCB](aa1-2.jpeg)
+![PCB](img/aa1-2.jpeg)
 
 ### Conclusion
 

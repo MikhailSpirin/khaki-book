@@ -15,6 +15,15 @@ nav:
     - Python: coding/python.md
     - Python Packages: coding/python-packages.md
     - Pip: coding/pip.md
+  - Electronics:
+    - Repair:
+        - Tascam DP-003SD: electronics/repair/dp003sd.md
+        - Alesis Microverb III: electronics/repair/microverb.md
+        - AI Synthesis Quad VCA: electronics/repair/quadvca.md
+        - Befaco Sampling Modulator: electronics/repair/samplingmodulator.md
+        - Strymon AA1: electronics/repair/strymonaa1.md
+        - JakPlugg uTides: electronics/repair/tides.md
+        - Doepfer A-111-2: electronics/repair/doepfer-a111-2.md
   - Generative:
     - Algorithms: generative/algoritms.md
     - Inspiration: generative/inspiration.md
