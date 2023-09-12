@@ -27,10 +27,13 @@ nav:
   - Generative:
     - Algorithms: generative/algorithms.md
     - Inspiration: generative/inspiration.md
+    - Flow Fields: generative/flowfields.md
     - Shaders: generative/shaders.md
   - Media:
     - Movies: media/movies.md
     - Music: media/music.md
+  - Music:
+    - Drums Learning: music/drumslearning.md
 
 
 

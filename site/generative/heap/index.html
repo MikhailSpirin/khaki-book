@@ -12,13 +12,9 @@
         <meta name="author" content="MikhailS">
       
       
-        <link rel="canonical" href="https://mikhailspirin.github.io/khaki-book/generative/algorithms/">
+        <link rel="canonical" href="https://mikhailspirin.github.io/khaki-book/generative/heap/">
       
       
-        <link rel="prev" href="../../electronics/repair/doepfer-a111-2/">
-      
-      
-        <link rel="next" href="../inspiration/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +22,7 @@
     
     
       
-        <title>Algorithms - The Dark Khaki Book Of Curiosities</title>
+        <title>The Heap - The Dark Khaki Book Of Curiosities</title>
       
     
     
@@ -79,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#idea-behind-this-article" class="md-skip">
+        <a href="#the-heap" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Algorithms
+              The Heap
             
           </span>
         </div>
@@ -695,19 +691,17 @@
       
   
   
-    
-  
   
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
@@ -720,7 +714,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Generative
@@ -731,29 +725,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Algorithms
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -762,54 +736,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#rainbow-smoke" class="md-nav__link">
-    Rainbow Smoke
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#packing-on-plain-surface" class="md-nav__link">
-    Packing on plain surface
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#perlin-noise-flow-fields" class="md-nav__link">
-    Perlin Noise Flow Fields
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links-and-other-ideas" class="md-nav__link">
-    Links and other ideas
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -963,42 +889,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#rainbow-smoke" class="md-nav__link">
-    Rainbow Smoke
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#packing-on-plain-surface" class="md-nav__link">
-    Packing on plain surface
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#perlin-noise-flow-fields" class="md-nav__link">
-    Perlin Noise Flow Fields
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links-and-other-ideas" class="md-nav__link">
-    Links and other ideas
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1015,35 +905,31 @@
   
 
 
-<h1 id="idea-behind-this-article">Idea behind this article</h1>
-<p>Purpose of this article is to gather information and links about ideas and approaches to  algorithmic art. I'm going to use this article as a reference, as an idea source, as a inspiration.</p>
-<h2 id="rainbow-smoke">Rainbow Smoke</h2>
-<p>Very simple idea with stunning results.
-All is described here: http://rainbowsmoke.hu/home
-Also, i find this youtube really useful: <a href="https://www.youtube.com/watch?v=dVQDYne8Bkc">smoking</a></p>
-<p>Possible directions</p>
+<h1 id="the-heap">The Heap</h1>
+<p>This will be source for all links and intereasting topics i want to discover. Not sorted. Books, articles, videos.</p>
 <ul>
-<li>Change colorspace size/content (e.g. CMYK)</li>
-<li>Use other painting (Rembrandt?) as source for palette</li>
-<li>Use approach to change other params - for example, flow fields to determine direction of next pixel</li>
-<li>Scroll through colorspace (x/y/z) to create animation</li>
+<li>
+<p>https://tylerxhobbs.com/essays/2020/flow-fields</p>
+</li>
+<li>
+<p>https://www.gorillasun.de/blog/perlin-noise-flow-fields-in-processing-part-i/</p>
+</li>
+<li>
+<p>https://tylerxhobbs.com/essays/2019/code-goes-in-art-comes-out</p>
+</li>
+<li>
+<p>https://github.com/cnfrancis/noisey-shapes</p>
+</li>
+<li>
+<p>https://sighack.com/</p>
+</li>
+<li>
+<p>https://martin.ankerl.com/2009/12/09/how-to-create-random-colors-programmatically/</p>
+</li>
+<li>
+<p>https://www.behance.net/gallery/60432597/Weekly-Work-Pieces-2018</p>
+</li>
 </ul>
-<h2 id="packing-on-plain-surface">Packing on plain surface</h2>
-<p>Idea first appeared to me when i thought of generative city in ortho projection, like in this <a href="https://www.instagram.com/idflood/">insta</a>
-I need a way to pack obkects on surface, 2d or 3d. For city 2d s fine, i can play later with height of buildings.</p>
-<p>So most wonderful way i found is <a href="https://paulbourke.net/fractals/randomtile/">this one</a>.</p>
-<p>This is example of 2d figures filled with this <a href="https://paulbourke.net/fractals/randomtile/statistical_geometry_examples.pdf">approach</a>.</p>
-<p>One issue which is essential for this algorithm is how to get intersection. For Blender, i found BHVTree approach is fine but really slow, expectially for 100+ objects.
-For python 2d i found great library shapely, which can be used to solve this issue.</p>
-<pre><code>TODO
-</code></pre>
-<h2 id="perlin-noise-flow-fields">Perlin Noise Flow Fields</h2>
-<pre><code>TODO
-</code></pre>
-<h2 id="links-and-other-ideas">Links and other ideas</h2>
-<ol>
-<li>Wow! Tons of articels in <a href="https://archive.bridgesmathart.org/#gsc.tab=0">Bridges Archive</a></li>
-</ol>
 
 
 
@@ -1066,44 +952,6 @@ For python 2d i found great library shapely, which can be used to solve this iss
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
-        
-          
-          <a href="../../electronics/repair/doepfer-a111-2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Doepfer A-111-2" rel="prev">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Doepfer A-111-2
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../inspiration/" class="md-footer__link md-footer__link--next" aria-label="Next: Inspiration" rel="next">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Inspiration
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">

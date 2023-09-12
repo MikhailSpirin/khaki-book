@@ -33,17 +33,6 @@ This is example of 2d figures filled with this [approach](https://paulbourke.net
 One issue which is essential for this algorithm is how to get intersection. For Blender, i found BHVTree approach is fine but really slow, expectially for 100+ objects.
 For python 2d i found great library shapely, which can be used to solve this issue.
 
-```
-TODO
-```
-
-## Perlin Noise Flow Fields
-
-```
-TODO
-```
-
-
 ## Links and other ideas
 
 1. Wow! Tons of articels in [Bridges Archive](https://archive.bridgesmathart.org/#gsc.tab=0)
