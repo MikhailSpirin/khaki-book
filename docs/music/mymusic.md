@@ -26,14 +26,17 @@ Projects are:
 
 #### Moldymoor - Interstellar Warmth
 [![Moldymoor - Interstellar Warmth](http://img.youtube.com/vi/PBaoMTpkpt8/0.jpg)](https://www.youtube.com/watch?v=PBaoMTpkpt8 "Moldymoor - Interstellar Warmth")
+
 Polyend Tracker for beats, Malekko Voltage Blcok for melody, some other Eurorack for pads. Video is a combination of different shaders from ShaderToy resource.
 
 #### Moldymoor - In The Name Of The Fall
 [![Moldymoor - In The Name Of The Fall](http://img.youtube.com/vi/80rLAZSYoWE/0.jpg)](https://www.youtube.com/watch?v=80rLAZSYoWE "Moldymoor - In The Name Of The Fall")
+
 Noisy beats with manual Launchpad fingerdrumming, Rings with complicated in audio for percussion. Noises and trippy edited video from Vietnamese trip hundreds of years ago...
 
 #### Moldymoor - Sheeps, Robots and Android
 [![Moldymoor - Sheeps, Robots and Android](http://img.youtube.com/vi/sENklxlnrM4/0.jpg)](https://www.youtube.com/watch?v=sENklxlnrM4 "Moldymoor - Sheeps, Robots and Android")
+
 Kind of techno... With old-style generative graphics
 
 #### Moldymoor - If It's You
@@ -48,6 +51,5 @@ So i decided to track the mood of these 90 days of 2022/2023 winter (of this bom
 Every day i do a modular eurorack track.
 
 Every day i have some words, which are used to AI-generate a cover - via great DeviantArt tool called DreamUp. I add "lyrics" to each of the tracks. Hope you enjoy!
-
 
 [![90 Days](http://img.youtube.com/vi/26nSpuR3JaQ/0.jpg)](https://www.youtube.com/watch?v=wDYfXLFuL50&list=PL1JAuxthlgm2np9Qn9i9Y-00nslBmp6yW "90 Days Of Winter")
