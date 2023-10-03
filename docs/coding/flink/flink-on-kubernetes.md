@@ -51,17 +51,77 @@ I met problem that docker doesn't capture my script cahnges - Dockerfile actuall
 docker build --build-arg CACHEBUST=$(date +%s) --tag flink-python-example:latest .
 
 
-# Issues which i've met
+# Monitoring with Prometheus
+So the task is to get Flink metrics in K8s cluster (AWS based in my case, with AWS EKS), there shopuld be no manual tuning of dlink jobs to get metrics, nice to have - metrics about general status of Flink Operator. All is helm-based releases.
 
+Task consist of 3 parts:
+  - Setting up Prometheus to scrap metrics
+  - Setting up Flink to expose metrics
+  - Make Prometheus know waht exactly to scrap
+
+## Prometheus
+I'm talking about general [prometheus-community](https://github.com/prometheus-community/helm-charts) app. It is installed as helm release. Basic settings make scrapping very simple: Your Kubernetes POD (important) should have annotiations like
+```
+prometheus.io/path: "/"
+prometheus.io/port: "9249"
+prometheus.io/scrape: "true"
+```
+So basically no need to change settings, basic Prometheus config is fine.
+
+## Exposing metrics
+For jobmanager and taskmanager, this is set from flink-conf.yaml. In K8s context, this is basically set in config yaml of the Flink app like this:
+
+```spec:
+  ...
+  flinkConfiguration:
+    ...
+    metrics.reporters: prom
+    metrics.reporter.prom.factory.class: org.apache.flink.metrics.prometheus.PrometheusReporterFactory
+    metrics.reporter.prom.port: "9249"
+    ...
+```    
+Other settings are described in Flink documentation.
+
+As for Flink K8s Operator, exposing metrics are done via same file, but i did it on helm install, by changing defaultConfiguration property this way:
+
+```defaultConfiguration:
+  create: trueso
+  append: true
+  flink-conf.yaml: |+
+    kubernetes.operator.metrics.reporter.prom.factory.class: org.apache.flink.metrics.prometheus.PrometheusReporterFactory
+    kubernetes.operator.metrics.reporter.prom.port: 9249
+```
+
+## How to make Prometheus notice exposed metrics?
+This is where i spent most of the time with this task...
+It is important to understand that prometheus with basic config gets metrics from PODS with specific annotattion. Trying to mark flinkdeployment, some service accounts or anything else didn't work form me. What actually worked was exactly [this part of docs](https://nightlies.apache.org/flink/flink-kubernetes-operator-docs-main/docs/custom-resource/pod-template/) which sets how pod annotations should look like.
+
+For Flink Operator, this is set in values for helm install this way:
+```operatorPod:
+  annotations:
+    prometheus.io/path: "/"
+    prometheus.io/port: "9249"
+    prometheus.io/scrape: "true"
+```
+
+Also, i used
+```
+k describe pods/...
+```
+
+To check how actual annotastions look like after settings changes. Also, this can be checked from prometheus UI - Main Menu -> Status -> Targets show all targets which are scrapped, also Pods. JobManager pod, TaskManager pod, Flink K8s Operator should be there for monitoring to work.
+
+# Issues which i've met worth some attention
+
+1.
 ```
 Caused by: java.lang.ClassCastException: cannot assign instance of org.apache.kafka.clients.consumer.OffsetResetStrategy to field org.apache.flink.connector.kafka.source.enumerator.initializer.ReaderHandledOffsetsInitializer.offsetResetStrategy of type org.apache.kafka.clients.consumer.OffsetResetStrategy in instance of org.apache.flink.connector.kafka.source.enumerator.initializer.ReaderHandledOffsetsInitializer
 ```
 https://stackoverflow.com/questions/72266646/flink-application-classcastexception
 
-
-
-# Flink k8s Operator Commands:
-
+2.
+Always check examples configuration - to match actually used Flink version.
+I spend lots of time trying to fix issue, which was connected to Dockerfile which builds custom PyFlink image. I my case, Flink 1.15 didn't need liblzma-dev library, but 1.16 actyulally needed it. So when i tried to start example for the newes version, it failed to start with very ugly error, which didn't lead me to any ideas...
 
 
 
