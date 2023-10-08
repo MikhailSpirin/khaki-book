@@ -46,8 +46,9 @@ Kind of techno... With old-style generative graphics
 [![Moldymoor - I Am Sorry](http://img.youtube.com/vi/eIwI62fruIc/0.jpg)](https://www.youtube.com/watch?v=eIwI62fruIc "Moldymoor - I Am Sorry")
 
 ### The 90 Days of A Bomb Winter
+This is actually playlist of my modular experiments, composed during 90 days. One day - one track of different genre, direction, mood - i tried actually to be creative!
 
-So i decided to track the mood of these 90 days of 2022/2023 winter (of this bomb winter i must add).
+I decided to track the mood of these 90 days of 2022/2023 winter (of this bomb winter i must add).
 Every day i do a modular eurorack track.
 
 Every day i have some words, which are used to AI-generate a cover - via great DeviantArt tool called DreamUp. I add "lyrics" to each of the tracks. Hope you enjoy!
