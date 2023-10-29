@@ -33,6 +33,23 @@ This is example of 2d figures filled with this [approach](https://paulbourke.net
 One issue which is essential for this algorithm is how to get intersection. For Blender, i found BHVTree approach is fine but really slow, expectially for 100+ objects.
 For python 2d i found great library shapely, which can be used to solve this issue.
 
+## Linear optimization
+
+This story start with this book: https://www.amazon.com/Opt-Art-Mathematical-Optimization-Visual/dp/0691164061
+I have it in Hardcover, and though it is hard to get Math behind what happens there, i will try to explain it here:
+
+There is a very common problem of function optimization based on some consttraints. May be the most known is problem of travelling salesman problem, is known to be very hard in any case with relatively many points; at the same time, process called linear optimizaion allows to solve the problem with some predicted precision. We usually don't need absolutely optimal solution, almost optimal is usually fine.
+
+So one of usage of linear optimization can be finding of placement some mozaic tiles with some consttraints. Above book shows some examples: ![here](https://static.scientificamerican.com/blogs/assets/Image/obamabosch.png)
+
+I guess images like [this](https://www.pinterest.com/pin/674906694178916889/) can also be done this way
+
+Things to investigate:
+
+- [pydata linear optimization talk](https://www.youtube.com/watch?v=7yZ5xxdkTb8)
+
+- on [realpython](https://realpython.com/linear-programming-python/)
+
 ## Links and other ideas
 
 1. Wow! Tons of articels in [Bridges Archive](https://archive.bridgesmathart.org/#gsc.tab=0)

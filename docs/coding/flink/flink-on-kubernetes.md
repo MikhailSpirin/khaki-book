@@ -51,7 +51,7 @@ I met problem that docker doesn't capture my script cahnges - Dockerfile actuall
 docker build --build-arg CACHEBUST=$(date +%s) --tag flink-python-example:latest .
 
 
-# Monitoring with Prometheus
+# Monitoring Flink with Prometheus
 So the task is to get Flink metrics in K8s cluster (AWS based in my case, with AWS EKS), there shopuld be no manual tuning of dlink jobs to get metrics, nice to have - metrics about general status of Flink Operator. All is helm-based releases.
 
 Task consist of 3 parts:
@@ -110,6 +110,47 @@ k describe pods/...
 ```
 
 To check how actual annotastions look like after settings changes. Also, this can be checked from prometheus UI - Main Menu -> Status -> Targets show all targets which are scrapped, also Pods. JobManager pod, TaskManager pod, Flink K8s Operator should be there for monitoring to work.
+
+
+# Service Accounts stuff
+
+So basically Flink k8s operator creates 2 service accounts - "flink-operator" for infra-related things and "flink" for jobs and task-managers.
+
+In AWS environment, for accessing its resources like Kinesis or S3, it's needed to bind IAM role to flink service account. This is done by this article info - https://docs.aws.amazon.com/eks/latest/userguide/associate-service-account-role.html
+
+But actually all is needed add somehow this annotation to any service account ("flink" or created one):
+
+```annotations:
+  eks.amazonaws.com/role-arn: "arn:aws:iam::588639172377:role/kube-dataplatform-fave-by-test"
+```
+Also, additional policy is needed to assume this role (described in article above):
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Federated": "arn:aws:iam::111122223333:oidc-provider/oidc.eks.region-code.amazonaws.com/id/EXAMPLED539D4633E53DE1B71EXAMPLE"
+            },
+            "Action": "sts:AssumeRoleWithWebIdentity",
+            "Condition": {
+                "StringEquals": {
+                    "oidc.eks.region-code.amazonaws.com/id/EXAMPLED539D4633E53DE1B71EXAMPLE:sub": "system:serviceaccount:default:my-service-account",
+                    "oidc.eks.region-code.amazonaws.com/id/EXAMPLED539D4633E53DE1B71EXAMPLE:aud": "sts.amazonaws.com"
+                }
+            }
+        }
+    ]
+}
+```
+
+Small neat thing:
+```
+brew install iam-policy-json-to-terraform
+```
+we use terraform to configure IAM roles for flink, and this simple console utility is good enough to covert exisiting IAM Json to terraform format.
 
 # Issues which i've met worth some attention
 

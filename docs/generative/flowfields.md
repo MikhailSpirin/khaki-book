@@ -4,12 +4,11 @@ Author: m
 Date: 5092023
 ---
 
-So I feel like Flow Fields topic deserves separate article, as i'm reading more and more sources about it
+So I feel like Flow Fields topic deserves separate article, as i'm reading more and more sources about it.
 
 Flow Fields (Vector Fields) is very simple - 1d/2d/3d set of values, each describing some vector. If we put particles on such 2d plane and start building traces from those particles, we will see set of beautiful lines
 
 # Describing vector fieldas
-
 
 
 # Good sources
