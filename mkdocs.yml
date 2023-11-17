@@ -33,6 +33,7 @@ nav:
   - Media:
     - Movies: media/movies.md
     - Music: media/music.md
+    - Books: media/books.md
   - Music:
     - Drums Learning: music/drumslearning.md
     - My Music: music/mymusic.md
