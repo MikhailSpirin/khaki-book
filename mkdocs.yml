@@ -24,6 +24,7 @@ nav:
         - Strymon AA1: electronics/repair/strymonaa1.md
         - JakPlugg uTides: electronics/repair/tides.md
         - Doepfer A-111-2: electronics/repair/doepfer-a111-2.md
+        - Clouds: electronics/repair/clouds.md
   - Generative:
     - Algorithms: generative/algorithms.md
     - Inspiration: generative/inspiration.md

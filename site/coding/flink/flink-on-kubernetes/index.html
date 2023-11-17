@@ -1038,7 +1038,7 @@
 <h1 id="docker-issue">Docker issue</h1>
 <p>I met problem that docker doesn't capture my script cahnges - Dockerfile actually copies script, and if there changes there, it doesn't actually notice it. As a result</p>
 <p>docker build --build-arg CACHEBUST=$(date +%s) --tag flink-python-example:latest .</p>
-<h1 id="monitoring-with-prometheus">Monitoring with Prometheus</h1>
+<h1 id="monitoring-flink-with-prometheus">Monitoring Flink with Prometheus</h1>
 <p>So the task is to get Flink metrics in K8s cluster (AWS based in my case, with AWS EKS), there shopuld be no manual tuning of dlink jobs to get metrics, nice to have - metrics about general status of Flink Operator. All is helm-based releases.</p>
 <p>Task consist of 3 parts:
   - Setting up Prometheus to scrap metrics
@@ -1088,13 +1088,47 @@ Also, i used
 <pre><code>
 To check how actual annotastions look like after settings changes. Also, this can be checked from prometheus UI - Main Menu -&gt; Status -&gt; Targets show all targets which are scrapped, also Pods. JobManager pod, TaskManager pod, Flink K8s Operator should be there for monitoring to work.
 
-# Issues which i've met worth some attention
 
-1.
+# Service Accounts stuff
+
+So basically Flink k8s operator creates 2 service accounts - &quot;flink-operator&quot; for infra-related things and &quot;flink&quot; for jobs and task-managers.
+
+In AWS environment, for accessing its resources like Kinesis or S3, it's needed to bind IAM role to flink service account. This is done by this article info - https://docs.aws.amazon.com/eks/latest/userguide/associate-service-account-role.html
+
+But actually all is needed add somehow this annotation to any service account (&quot;flink&quot; or created one):
+
+```annotations:
+  eks.amazonaws.com/role-arn: &quot;arn:aws:iam::588639172377:role/kube-dataplatform-fave-by-test&quot;
 </code></pre>
-<p>Caused by: java.lang.ClassCastException: cannot assign instance of org.apache.kafka.clients.consumer.OffsetResetStrategy to field org.apache.flink.connector.kafka.source.enumerator.initializer.ReaderHandledOffsetsInitializer.offsetResetStrategy of type org.apache.kafka.clients.consumer.OffsetResetStrategy in instance of org.apache.flink.connector.kafka.source.enumerator.initializer.ReaderHandledOffsetsInitializer
-```
-https://stackoverflow.com/questions/72266646/flink-application-classcastexception</p>
+<p>Also, additional policy is needed to assume this role (described in article above):</p>
+<pre><code>{
+    &quot;Version&quot;: &quot;2012-10-17&quot;,
+    &quot;Statement&quot;: [
+        {
+            &quot;Effect&quot;: &quot;Allow&quot;,
+            &quot;Principal&quot;: {
+                &quot;Federated&quot;: &quot;arn:aws:iam::111122223333:oidc-provider/oidc.eks.region-code.amazonaws.com/id/EXAMPLED539D4633E53DE1B71EXAMPLE&quot;
+            },
+            &quot;Action&quot;: &quot;sts:AssumeRoleWithWebIdentity&quot;,
+            &quot;Condition&quot;: {
+                &quot;StringEquals&quot;: {
+                    &quot;oidc.eks.region-code.amazonaws.com/id/EXAMPLED539D4633E53DE1B71EXAMPLE:sub&quot;: &quot;system:serviceaccount:default:my-service-account&quot;,
+                    &quot;oidc.eks.region-code.amazonaws.com/id/EXAMPLED539D4633E53DE1B71EXAMPLE:aud&quot;: &quot;sts.amazonaws.com&quot;
+                }
+            }
+        }
+    ]
+}
+</code></pre>
+<p>Small neat thing:</p>
+<pre><code>brew install iam-policy-json-to-terraform
+</code></pre>
+<p>we use terraform to configure IAM roles for flink, and this simple console utility is good enough to covert exisiting IAM Json to terraform format.</p>
+<h1 id="issues-which-ive-met-worth-some-attention">Issues which i've met worth some attention</h1>
+<p>1.</p>
+<pre><code>Caused by: java.lang.ClassCastException: cannot assign instance of org.apache.kafka.clients.consumer.OffsetResetStrategy to field org.apache.flink.connector.kafka.source.enumerator.initializer.ReaderHandledOffsetsInitializer.offsetResetStrategy of type org.apache.kafka.clients.consumer.OffsetResetStrategy in instance of org.apache.flink.connector.kafka.source.enumerator.initializer.ReaderHandledOffsetsInitializer
+</code></pre>
+<p>https://stackoverflow.com/questions/72266646/flink-application-classcastexception</p>
 <p>2.
 Always check examples configuration - to match actually used Flink version.
 I spend lots of time trying to fix issue, which was connected to Dockerfile which builds custom PyFlink image. I my case, Flink 1.15 didn't need liblzma-dev library, but 1.16 actyulally needed it. So when i tried to start example for the newes version, it failed to start with very ugly error, which didn't lead me to any ideas...</p>
