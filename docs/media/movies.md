@@ -29,3 +29,8 @@ What a coincedence...
 
 ## Antares - 10.10.2023
 I actually turned that off, dfidn't manage to finish first story. May be i will try later, but for now it's ugly and i can't find anything interesting for me in that movie.
+
+## The Milk of Sorrow - 29.10.2023
+Once i said that I hate those local-native-nation-specific movies. Now I say that i find some real love in those. This is a deep example of such case... There are several long stories, beautiful local songs, spiritual experience, poor and rich, beautiful main actress.
+Lima backround with its sands and yellows. Alien-looking characters. Fear of the War, even war in the past. Potato flower.
+I actually advise this movie to anyone. Just be patient...

@@ -19,3 +19,11 @@ Score:
 
 Intersting: **8 from 10**
 Wood advise it: **5 from 10**
+
+## Charlie Mackesy - The Boy, the Mole, the Fox and the Horse
+
+So this is a piece of art in my opinion. You open it, you read it, try to understand, maybe cry a bit... Because s.t happens. And then you believe in love again. You belive that actually only love can make you live and find your flow in this story of desperation which some call life.
+I can put quotes here but i don't want. I just want you to have this book. I guess this will help
+
+Intersting: **8 from 10**
+Wood advise it: **10 from 10**
