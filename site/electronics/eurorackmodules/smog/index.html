@@ -12,7 +12,7 @@
         <meta name="author" content="MikhailS">
       
       
-        <link rel="canonical" href="https://mikhailspirin.github.io/khaki-book/electronics/repair/yarns/">
+        <link rel="canonical" href="https://mikhailspirin.github.io/khaki-book/electronics/eurorackmodules/smog/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>Yarns - The Dark Khaki Book Of Curiosities</title>
+        <title>Antumbra Smog (Clouds clone) - The Dark Khaki Book Of Curiosities</title>
       
     
     
@@ -74,11 +74,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#pre" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Yarns
+              Antumbra Smog (Clouds clone)
             
           </span>
         </div>
@@ -538,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dp003sd/" class="md-nav__link">
+      <a href="../../repair/dp003sd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -558,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../microverb/" class="md-nav__link">
+      <a href="../../repair/microverb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -578,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../quadvca/" class="md-nav__link">
+      <a href="../../repair/quadvca.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -598,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../samplingmodulator/" class="md-nav__link">
+      <a href="../../repair/samplingmodulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -618,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strymonaa1/" class="md-nav__link">
+      <a href="../../repair/strymonaa1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -638,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tides/" class="md-nav__link">
+      <a href="../../repair/tides.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -658,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../doepfer-a111-2/" class="md-nav__link">
+      <a href="../../repair/doepfer-a111-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -678,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../clouds/" class="md-nav__link">
+      <a href="../../repair/clouds.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1028,35 +1023,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pre" class="md-nav__link">
-    Pre
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#problem-and-thinking" class="md-nav__link">
-    Problem and thinking
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#solution" class="md-nav__link">
-    Solution
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1073,21 +1039,15 @@
   
 
 
-  <h1>Yarns</h1>
+  <h1>Antumbra Smog (Clouds clone)</h1>
 
-<hr />
-<p>title: "Mutable Instruments Clouds Clone - Repair"
-date: 2023-17-11
-draft: false</p>
-<hr />
-<h3 id="pre">Pre</h3>
-<p>Bought this module on reverb as non-functioning (like "leds don't work"). As Clouds MI module is well documented, there is a schematic and all eagle files, open-source firmware i decided to give it a try and fix. Also price was pretty much decent, so:</p>
-<h3 id="problem-and-thinking">Problem and thinking</h3>
-<p>Actually when module came i understood that there is more than just leds. Actually i first traced all connections from leds to MCU, seems to be working fine... But actually i understood that module stops working when leds die or - didn't work fin at all (i mean actual desired effect). Inspection showed that module seems to be factory-manufactored - according to quality of soldering and placing of components.
-Seems to me it was kind of PCBWay with soldering components. So I thought that will not be productive to search for bad solder joints, it is probably some faulty component. And at that point I had an idea about crystal - as module dies sponaneously, but have all proper power and ground - it is either Reset line, or crystal, or powering problems.</p>
-<h3 id="solution">Solution</h3>
-<p>So i desoldered smd crystal and soldered new one... Unfortunately i lifted one pad and detouched it from the base, but fixed it with separate wire.</p>
-<p>And yes! That was the issue! Module started and worked pretty well after that fix. Simple Clouds, but I didn't have one yet (at least during my consious eurorack period) so it is actualy very interesting to investigate and even change firmware may be.</p>
+<p>With this module i'm going to break story of my unsuccessful common story with Clouds modules. First one, Typhoon, i actually burned in the most stupid way - messed power header. Also i bought non-working clouds... And problem which seemed to be simple became large problem. Ok, i even burnt MCU on this module! But lets start from the beginning</p>
+<p>I really like Antumbra, it has cool design, it is really hp-friendly, it has great pcb design. Sourcing parts were not an issue here, everything was actually accessible. Only MCU made some problem - chip shortage made very different and alogical prices and availablility for it. Anyway, all parts are sourced and soldered. Turning on! Even flashing via JTAG socket was simple. I used STlink from Discovery board, everythong worked perfectly fine, i did use Mutable Dev Environment, which is very useful.</p>
+<p>Problem number one - module seemed to flash fine, but leds almost doesn't react on button presses. While reflashing and mingling arounf with those, something happend and it stopped to react on buttons completely. And, MCU started to heat fast. Ok, let's check...</p>
+<p>So i see that voltge regulator LM1117 actulay lost leg which was soldered to the ground. I don't now what it decided, but it actually put 6V on 3.3V line!
+I think MCU is dead, also probably WM8731 also didn't survive; its power is tolerant to 3.6V max according to datasheet. So I resoldered both ICs.</p>
+<p>Now it works well, but i see that LEDS still doesn't shine.. I decided to check LED resistors and yes, for some reason (i can think only about messing rows in my BOM spreadsheet) i soldered 200k instead of 68 Ohm. Resoldering and everythin works perfectly</p>
+<p>Finally! My Clouds is done.</p>
 
 
 
