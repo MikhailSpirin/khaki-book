@@ -17,16 +17,16 @@ nav:
     - Pip: coding/pip.md
   - Electronics:
     - Repair:
-        - Tascam DP-003SD: electronics/repair/dp003sd.md
-        - Alesis Microverb III: electronics/repair/microverb.md
-        - Livid Minim: electronics/repair/lividminim.md
-      - Eurorack:
-        - AI Synthesis Quad VCA: electronics/eurorackmodules/quadvca.md
-        - JakPlugg uTides: electronics/eurorackmodules/tides.md
-        - Befaco Sampling Modulator: electronics/eurorackmodules/samplingmodulator.md
-        - Clouds: electronics/eurorackmodules/clouds.md
-        - Strymon AA1: electronics/eurorackmodules/strymonaa1.md
-        - Doepfer A-111-2: electronics/eurorackmodules/doepfer-a111-2.md
+      - Tascam DP-003SD: electronics/repair/dp003sd.md
+      - Alesis Microverb III: electronics/repair/microverb.md
+      - Livid Minim: electronics/repair/lividminim.md
+    - Eurorack:
+      - AI Synthesis Quad VCA: electronics/eurorackmodules/quadvca.md
+      - JakPlugg uTides: electronics/eurorackmodules/tides.md
+      - Befaco Sampling Modulator: electronics/eurorackmodules/samplingmodulator.md
+      - Clouds: electronics/eurorackmodules/clouds.md
+      - Strymon AA1: electronics/eurorackmodules/strymonaa1.md
+      - Doepfer A-111-2: electronics/eurorackmodules/doepfer-a111-2.md
   - Generative:
     - Algorithms: generative/algorithms.md
     - Inspiration: generative/inspiration.md
