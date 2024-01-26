@@ -39,6 +39,19 @@ add swing, change position of kick drum, try to play triplets or do 3 hats inste
 
 # Youtube channels
 
-```
-TODO
-```
+Here i will share channels which i use to get new beats for training and inspiration.
+My main directions are funk, latin, rock, new UK jazz and something in the middle. I'm sharing here people who don't spend your time - as much pure info as possible.
+
+[Jody Drums - Drumeo Partner](https://www.youtube.com/@jodydrummer)
+
+[Slight Read Drums](https://www.youtube.com/@SightReadDrums)
+
+[Uwe Petersen](https://www.youtube.com/@uwepetersen)
+
+[LM Ulrich](https://www.youtube.com/@lmulrich)
+
+[Hybrid Drummer](https://www.youtube.com/channel/UCQKRxgOpGQvP_VdScKRq93g)
+
+[JohnX Drum Lessons](https://www.youtube.com/@JohnXDrumLessons)
+
+[Drum Hub Lessons - UK Jazz](https://www.youtube.com/@DrumHubTuition)
