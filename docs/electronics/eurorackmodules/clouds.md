@@ -15,3 +15,7 @@ I proceeded to desolder the SMD crystal and replaced it with a new one. Unfortun
 ### And indeed, that was the issue!
 
 The module started working and performed well after this fix. Although it's a Simple Clouds, I hadn't owned one before (at least during my conscious Eurorack period), making it particularly interesting to investigate, and I might even consider changing the firmware.
+
+### And no, ot is not working...
+
+Weird symptoms: when putting too much reverb, module dies. I gave up and ordered new codec and MCU, i hope to solve the issue by resoldering both of them. Also i like to resolder it - this is so cool!
