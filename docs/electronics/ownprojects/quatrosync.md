@@ -44,12 +44,12 @@ Outputs of DAC is 4v at it max. I tried to scale it via opamp in 2 times, but fo
 
 ### Protecting input
 Levels of eurorack accoring to standard (at least Doepfer's) is -5 to +10v, which is definitely not suitable for 3.3V ESP8266 digital ins. So i'm using simple circuit to protect input - check this:
-![Broken](img/qs-gatein.png)
+![GateIn](img/qs-gatein.png)
 Idea is taken from muffwiggler forum.
 
 ### Buffering outputs
 Also as a training I used TL074 to protect outputs of DAC. seems to be working well, done with this specific schematic, CV follower:
-![Broken](img/qs-digitalprotection.png)
+![DigitalProtection](img/qs-digitalprotection.png)
 This is also taken from muffwiggler forum.
 
 ### Slow DAC

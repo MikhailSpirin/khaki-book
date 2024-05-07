@@ -16,6 +16,9 @@ nav:
     - Python Packages: coding/python-packages.md
     - Pip: coding/pip.md
   - Electronics:
+    - My Own Projects:
+      - Quatrosync (Quad ESP8266 Eurorack LFO): electronics/ownprojects/quatrosync.md
+      - DSP on STM32F4Discovery: electronics/ownprojects/stm32f4discovery.md
     - Repair:
       - Tascam DP-003SD: electronics/repair/dp003sd.md
       - Alesis Microverb III: electronics/repair/microverb.md

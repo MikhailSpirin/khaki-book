@@ -12,24 +12,24 @@
         <meta name="author" content="MikhailS">
       
       
-        <link rel="canonical" href="https://mikhailspirin.github.io/khaki-book/electronics/casiosynth/">
+        <link rel="canonical" href="https://mikhailspirin.github.io/khaki-book/electronics/ownprojects/stm32f4discovery/">
       
       
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.3">
     
     
       
-        <title>Casiosynth - The Dark Khaki Book Of Curiosities</title>
+        <title>DSP on stm32f4discovery - The Dark Khaki Book Of Curiosities</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0e669242.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#intention" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -86,7 +91,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="The Dark Khaki Book Of Curiosities" class="md-header__button md-logo" aria-label="The Dark Khaki Book Of Curiosities" data-md-component="logo">
+    <a href="../../.." title="The Dark Khaki Book Of Curiosities" class="md-header__button md-logo" aria-label="The Dark Khaki Book Of Curiosities" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Casiosynth
+              DSP on stm32f4discovery
             
           </span>
         </div>
@@ -194,7 +199,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="The Dark Khaki Book Of Curiosities" class="md-nav__button md-logo" aria-label="The Dark Khaki Book Of Curiosities" data-md-component="logo">
+    <a href="../../.." title="The Dark Khaki Book Of Curiosities" class="md-nav__button md-logo" aria-label="The Dark Khaki Book Of Curiosities" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -223,7 +228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -310,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../coding/challenge/codewars/" class="md-nav__link">
+      <a href="../../../coding/challenge/codewars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -330,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../coding/challenge/leetcode/" class="md-nav__link">
+      <a href="../../../coding/challenge/leetcode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -358,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../coding/atom-shortcuts/" class="md-nav__link">
+      <a href="../../../coding/atom-shortcuts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -378,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../coding/markdown/" class="md-nav__link">
+      <a href="../../../coding/markdown/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -398,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../coding/python/" class="md-nav__link">
+      <a href="../../../coding/python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../coding/python-packages/" class="md-nav__link">
+      <a href="../../../coding/python-packages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -438,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../coding/pip/" class="md-nav__link">
+      <a href="../../../coding/pip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../repair/dp003sd/" class="md-nav__link">
+      <a href="../../repair/dp003sd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../repair/microverb/" class="md-nav__link">
+      <a href="../../repair/microverb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -573,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../repair/lividminim/" class="md-nav__link">
+      <a href="../../repair/lividminim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -635,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../eurorackmodules/quadvca/" class="md-nav__link">
+      <a href="../../eurorackmodules/quadvca/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../eurorackmodules/tides/" class="md-nav__link">
+      <a href="../../eurorackmodules/tides/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -675,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../eurorackmodules/samplingmodulator/" class="md-nav__link">
+      <a href="../../eurorackmodules/samplingmodulator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -695,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../eurorackmodules/clouds/" class="md-nav__link">
+      <a href="../../eurorackmodules/clouds/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -715,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../eurorackmodules/strymonaa1/" class="md-nav__link">
+      <a href="../../eurorackmodules/strymonaa1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -735,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../eurorackmodules/doepfer-a111-2/" class="md-nav__link">
+      <a href="../../eurorackmodules/doepfer-a111-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -804,7 +809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../generative/algorithms/" class="md-nav__link">
+      <a href="../../../generative/algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -824,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../generative/inspiration/" class="md-nav__link">
+      <a href="../../../generative/inspiration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -844,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../generative/flowfields/" class="md-nav__link">
+      <a href="../../../generative/flowfields/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../generative/shaders/" class="md-nav__link">
+      <a href="../../../generative/shaders/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -925,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../media/movies/" class="md-nav__link">
+      <a href="../../../media/movies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -945,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../media/music/" class="md-nav__link">
+      <a href="../../../media/music/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -965,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../media/books/" class="md-nav__link">
+      <a href="../../../media/books/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1026,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../music/drumslearning/" class="md-nav__link">
+      <a href="../../../music/drumslearning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1046,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../music/mymusic/" class="md-nav__link">
+      <a href="../../../music/mymusic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1084,6 +1089,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -1101,12 +1108,45 @@
   
 
 
-  <h1>Casiosynth</h1>
-
-<p>https://forum.arduino.cc/t/keypad-library-with-multiplexer/850685</p>
-<p>https://github.com/Meebleeps/MeeBleeps-Mutant-Synth/blob/master/src/MutantMozziSynth.ino</p>
-<p>casio to arduino keymatrix
-https://forum.arduino.cc/t/old-cassio-61key-piano-with-arduino-mega-matrix/687733</p>
+<h1 id="intention">Intention</h1>
+<p>I have a STM32F4 discovery board, which i use as st-link programmator and for learning stm32 ecosystem.
+Basicaly this board has already audio out and a microphone, which i can use; also, there is a number of dsp github projects for this board, so i decided to learn it to be able to do some dsp. This page contains my findoings and sources of wisdom.</p>
+<h1 id="my-shield-for-stm32f4">My "Shield" for stm32f4</h1>
+<p>For easier params mangling, i decided to solder additional board with pots and buttons - here is it's schematic</p>
+<p>┌────────┐        ┌─────────┐
+│PA1 in1 │        │ PA2 in2 │
+└────────┘  ┌───┐ └─────────┘
+            │PE2│
+┌────────┐  ├───┤ ┌─────────┐
+│PA3 in3 │  │PE4│ │ PB0 in8 │
+└────────┘  └───┘ └─────────┘</p>
+<p>┌────────┐  ┌───┐ ┌────────┐
+│PB1 in9 │  │PE5│ │PC1 in11│
+└────────┘  ├───┤ └────────┘
+            │PE6│
+┌────────┐  └───┘ ┌────────┐
+│PC4 in14│        │PC5 in15│
+└────────┘        └────────┘
+┌────────┐  ┌────┐ ┌────────┐
+│  PB4   │  │PB5 │ │  PB7   │
+└────────┘  └────┘ └────────┘</p>
+<p>Connecting buttons and pots is preatty easy: buttons and toggles - connect to gnd and signal pin, potentiomeneter - 3.3 signal_pin gnd. Notice that some legs on disco board are already used by periphirals, so check such with CubeMX soft for discovery board.
+Nine ADC channels are still free, though they are not 1-8, there are some occupied channels.</p>
+<h1 id="links">Links</h1>
+<p>https://github.com/umer06/Audio-DSP</p>
+<p>https://github.com/har-in-air/STM32_CODE_EXAMPLES</p>
+<p>https://github.com/rogerallen/stm32disc_synth1/tree/main</p>
+<p>https://www.youtube.com/watch?v=lNBrGOk0XzE&amp;t=416s</p>
+<h1 id="general-heap-about-my-dsp-learnings">General Heap about my DSP learnings</h1>
+<p>https://trebledj.me/posts/digital-audio-synthesis-for-dummies-part-1/</p>
+<p>Some community-supported open-source dsp algorithms
+https://www.musicdsp.org/en/latest/</p>
+<p>Some DSP on clouds
+https://medium.com/music-thing-modular-notes/how-to-get-started-writing-your-own-firmware-for-mutable-instruments-clouds-a08173cec317</p>
+<p>wiki on STM32F4
+https://stm32world.com/wiki/Main_Page</p>
+<p>some lessons specifically about STM32F Discovery board
+https://embeddedsystemengineering.blogspot.com/search/label/STM32F4%20Discovery</p>
 
 
 
@@ -1167,10 +1207,10 @@ https://forum.arduino.cc/t/old-cassio-61key-piano-with-arduino-mega-matrix/68773
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.top", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.footer", "navigation.top", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.78eede0e.min.js"></script>
       
     
   </body>
