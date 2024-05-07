@@ -12,7 +12,7 @@
         <meta name="author" content="MikhailS">
       
       
-        <link rel="canonical" href="https://mikhailspirin.github.io/khaki-book/electronics/ownprojects/sineclick/">
+        <link rel="canonical" href="https://mikhailspirin.github.io/khaki-book/electronics/ownprojects/quatrosync/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>Sine Click Musical Box - The Dark Khaki Book Of Curiosities</title>
+        <title>Quatrosync: quad syncable eurorack LFO - The Dark Khaki Book Of Curiosities</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pre" class="md-skip">
+        <a href="#brief" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sine Click Musical Box
+              Quatrosync: quad syncable eurorack LFO
             
           </span>
         </div>
@@ -1097,22 +1097,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pre" class="md-nav__link">
-    Pre
+  <a href="#brief" class="md-nav__link">
+    Brief
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prototype" class="md-nav__link">
-    Prototype
+  <a href="#main-idea-and-diagram" class="md-nav__link">
+    Main Idea and Diagram
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#main-idea" class="md-nav__link">
-    Main Idea
+  <a href="#powering" class="md-nav__link">
+    Powering
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developing" class="md-nav__link">
+    developing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaling-issue" class="md-nav__link">
+    Scaling issue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protecting-input" class="md-nav__link">
+    Protecting input
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buffering-outputs" class="md-nav__link">
+    Buffering outputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slow-dac" class="md-nav__link">
+    Slow DAC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waveforms" class="md-nav__link">
+    Waveforms
   </a>
   
 </li>
@@ -1142,30 +1184,63 @@
   
 
 
-  <h1>Sine Click Musical Box</h1>
+  <h1>Quatrosync: quad syncable eurorack LFO</h1>
 
-<h3 id="pre">Pre</h3>
-<p>I want to build sonic box, which can be useable on its own and be a sound source for my eurorack box. This will be based on Mozzy library + some ESP8266 NodeMCU boards, which i have; spent some time on thinking about what it will sound, and i guess i will use this video as base:</p>
-<p>https://www.youtube.com/watch?v=CLddxGIlVPU</p>
-<h3 id="prototype">Prototype</h3>
-<p>I have a spare ready-to-go box whiuch i built for previous project, i</p>
-<h3 id="main-idea">Main Idea</h3>
-<p>I'm going to have Metro object counting 32th, and start/stop samples based on tick property of this metro object.</p>
+<h3 id="brief">Brief</h3>
+<p>I want to build eurorack module with microcontroller as a brain. Probably easiest but not obvious tool is LFO</p>
+<h3 id="main-idea-and-diagram">Main Idea and Diagram</h3>
+<p>┌───────┐ ┌──────────────┐                          <br />
+│Trig IN│ │Potentiometer │                          <br />
+└───┬───┘ └──┬───────────┘                          <br />
+    │        │                                      <br />
+    │        │                                      <br />
+┌───▼────────▼──┐      ┌────────┐      ┌───────┐    <br />
+│ESP8266 NodeMCU├──────► MCP4728├──────► TL074 │    <br />
+└───────────────┘      └────────┘      └┬─┬─┬─┬┘    <br />
+                                        │ │ │ │     <br />
+                                        │ │ │ ▼     <br />
+                                        │ │ │ CV out A
+                                        │ │ ▼       <br />
+                                        │ │ CV out B<br />
+                                        │ ▼         <br />
+                                        │ CV out C  <br />
+                                        ▼           <br />
+                                        CV out D          </p>
+<p>I have several old esp8266 boards, so i'm using one of those. Main goal of this project is to learn to work with DAC. As a DAC i'm using very small but very powerful mcp4728 DAC. It's 12bit, but from the Web it is discussed lots of times that it is not enough for v/oct, because it is not that linear on whole voltages span. TL074 is used for buffering of outputs of DAC.</p>
+<h3 id="powering">Powering</h3>
+<p>Eurorack has +12, -12 and +5, but for 5v it needs extended cable. Also I know that not all cases have 5v, so i decided to make +5 from 12v. Conviniently, i have L7805CV to make 5 from 12. It is old and not that efficient linear regulator, but i have lots of them from Aliexpress. ESP8266 NodeMCU is powered straight from +12V bus, DAC is powered from +5V.
+Opamp is powered with +12 and -12 buses.</p>
+<h3 id="developing">developing</h3>
+<p>With this project, i'm finally completely tired of Arduino IDE. It's not-developer-friendly IDE, it's fine for small projects but absence of autocomplete, code navigation and all other stuff makes me cry, especially after daily PyCharm and Atom experience. So I decided to switch and search for ggod toolchain, which ideally can fit all my needs in MCUs developing.
+And i guess i found one. Platformio has a plugin to VSCode, it is fast, it has config files in INI, it has all features of modern IDE (based on VSCode) and it seems to support all possible MCUs whcih i might use.
+So for now - I'm on Platformio.</p>
+<h3 id="scaling-issue">Scaling issue</h3>
+<p>Outputs of DAC is 4v at it max. I tried to scale it via opamp in 2 times, but for this momet i failed, will think of this later</p>
+<h3 id="protecting-input">Protecting input</h3>
+<p>Levels of eurorack accoring to standard (at least Doepfer's) is -5 to +10v, which is definitely not suitable for 3.3V ESP8266 digital ins. So i'm using simple circuit to protect input - check this:
+<img alt="Broken" src="../img/qs-gatein.png" />
+Idea is taken from muffwiggler forum.</p>
+<h3 id="buffering-outputs">Buffering outputs</h3>
+<p>Also as a training I used TL074 to protect outputs of DAC. seems to be working well, done with this specific schematic, CV follower:
+<img alt="Broken" src="img/qs-digitalprotection.png" />
+This is also taken from muffwiggler forum.</p>
+<h3 id="slow-dac">Slow DAC</h3>
+<p>I feel like it can be faster. Connection protocol is I2C, so i tried to make SDC faster with this command:</p>
+<h3 id="waveforms">Waveforms</h3>
+<p>I don't want to generate waveforms. Best option is just to "play" it, from saved files or arrays. There is a varaiety of free waveforms pacs arounf the internet, so i took one <a href="https://www.adventurekid.se/akrt/waveforms/adventure-kid-waveforms/">here</a> and worked on adding it as files to ESP8266 filesystem. Basically, it is wav; and wavs seems to be very easy stuff, with clean structure. So I read files from LittleFS (conviniently, it is very easy to create one with Platformio), find actual samples from it (uint16_t values) and play it with frequency set by trig input. Each output plays its own waveform, controlling potentiometer is fading between 2 waveforms, random on each channels. Fading is very simple, a+b/2, as samples all has same length.</p>
 <h3 id="links">Links</h3>
 <p>Very intersting Arduino-eurorack and other stuff site:
 http://pjmnc.free.fr/
 Very important stuff for me, adding trig in/ trig out to arduino with this schematics: http://pjmnc.free.fr/files/arduino_io.bmp</p>
 <p>Buttons with ESP8266
 https://diyi0t.com/switches-tutorial-for-arduino-and-esp8266/</p>
-<p>As mozzi output, i'm using this circuit which seems to work very well on all boardss which i Heave:
-https://ensorium.github.io/Mozzi/learn/output/</p>
-<p>I will start witgh this mixer:
-https://www.youtube.com/watch?v=q8tmUgaXrEQ</p>
 <p>ESP8266 reference gpios:
 https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/</p>
 <p>Analog IN for ESP8266:
 https://www.electronicshub.org/nodemcu-esp8266-adc-tutorial/</p>
 <p>Mozzi board-specific things are described here - https://github.com/sensorium/Mozzi</p>
+<p>ESP8266 nuances here
+https://alexgyver.ru/lessons/esp8266/</p>
 
 
 
