@@ -2,232 +2,232 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/coding/atom-shortcuts/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mikhailspirin.github.io/khaki-book/coding/cnamingconvention/</loc>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/coding/markdown/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/coding/pip/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/coding/python-packages/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/coding/python/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/coding/shell/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/coding/stuff/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/coding/challenge/codewars/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/coding/challenge/leetcode/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/coding/flink/flink-on-kubernetes/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/eurorackmodules/clouds/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/eurorackmodules/doepfer-a111-2/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/eurorackmodules/edges/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/eurorackmodules/quadvca/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/eurorackmodules/samplingmodulator/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/eurorackmodules/smog/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/eurorackmodules/strymonaa1/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/eurorackmodules/tides/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/eurorackmodules/yarns/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/ownprojects/axolotl/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/ownprojects/daisypatchsm/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/ownprojects/daiyseed/</loc>
-         <lastmod>2024-05-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mikhailspirin.github.io/khaki-book/electronics/ownprojects/dsp/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/ownprojects/esp/</loc>
-         <lastmod>2024-05-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://mikhailspirin.github.io/khaki-book/electronics/ownprojects/max11300/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/ownprojects/pd/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/ownprojects/quatrosync/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mikhailspirin.github.io/khaki-book/electronics/ownprojects/rgbledpanel/</loc>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/ownprojects/stm32f4discovery/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/repair/bossdr670/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/repair/dp003sd/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/repair/lividminim/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/electronics/repair/microverb/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/generative/algorithms/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/generative/flowfields/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/generative/fractals/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/generative/heap/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/generative/inspiration/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/generative/shaders/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/media/books/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/media/miramaxmovies/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/media/movies/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/media/music/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/media/youtubechannels/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/music/drumslearning/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://mikhailspirin.github.io/khaki-book/music/mymusic/</loc>
-         <lastmod>2024-05-07</lastmod>
+         <lastmod>2024-05-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

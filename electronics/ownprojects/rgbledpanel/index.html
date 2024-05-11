@@ -12,7 +12,7 @@
         <meta name="author" content="MikhailS">
       
       
-        <link rel="canonical" href="https://mikhailspirin.github.io/khaki-book/electronics/ownprojects/max11300/">
+        <link rel="canonical" href="https://mikhailspirin.github.io/khaki-book/electronics/ownprojects/rgbledpanel/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>Max11300 - The Dark Khaki Book Of Curiosities</title>
+        <title>RGB LED panel with ESP32 - The Dark Khaki Book Of Curiosities</title>
       
     
     
@@ -74,6 +74,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#brief" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Max11300
+              RGB LED panel with ESP32
             
           </span>
         </div>
@@ -1167,6 +1172,35 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#brief" class="md-nav__link">
+    Brief
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-story" class="md-nav__link">
+    Pre-story
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp8266-part-of-the-story" class="md-nav__link">
+    ESP8266 part of the story
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1183,9 +1217,18 @@
   
 
 
-  <h1>Max11300</h1>
+  <h1>RGB LED panel with ESP32</h1>
 
-<p>MAX11300 is an DAC/ADC/lots of other stuff. It is intterasting by its voltage range, which actually is ok for Eurorack. So i build a module from it - and unfortunately it failed...</p>
+<h3 id="brief">Brief</h3>
+<p>Rgb picel panel, which is widely used in outdoor and indoor advertising, is controlled via ESP32 board. Resolution is 64 x 32 pixels, no visual flickering. Basically panel show time taken from NTP, weather in specific location, and loads images with backgorund. Some transition effects also applied.</p>
+<h3 id="pre-story">Pre-story</h3>
+<p>Once i see <a href="https://www.reddit.com/r/raspberry_pi/comments/hxlk9c/been_working_on_this_led_matrix_display_project/">this project</a>.</p>
+<p>With my love for pixels and RGB and generative art i can't pass through this. So i bought a panel on Aliexpress and tries to rubn it with Raspberry Pi - unsuccesfully, beacuse of several things:
+  - All such opanels are 5v, and Raspberry Pi can't work with it straightaway, so i had to buy logic levels converter, which added wioring and potentional errors to schematic
+  - I used this <a href="https://github.com/hzeller/rpi-rgb-led-matrix">library for raspberry</a>. Though it is well documented and people seems to be fine with that, i didn't manage it to work well...
+  - At that point this project was definitely higher than my abilities</p>
+<h3 id="esp8266-part-of-the-story">ESP8266 part of the story</h3>
+<p>I started trying this panel with ESP8266-based NodeMCU, because i had spare ones just laying around. I managed to start panel succesfully with <a href="https://github.com/2dom/PxMatrix">this library</a>. Though it actually worked, any additional improvements or features made flickering way worse, up to non-useable device. I decided to move to ESP32 as its faster and seems to be working fine with decent framerate.</p>
 
 
 
